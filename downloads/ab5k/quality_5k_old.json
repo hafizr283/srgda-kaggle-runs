@@ -1,0 +1,47 @@
+{
+  "health": {
+    "saturation": 0.03340403363108635,
+    "std": 0.4914078116416931,
+    "mean": -0.07479314506053925,
+    "diversity": 0.4825975000858307,
+    "class_shares": [
+      0.00390625,
+      0.0234375,
+      0.15625,
+      0.17578125,
+      0.0859375,
+      0.015625,
+      0.19140625,
+      0.0546875,
+      0.15625,
+      0.13671875
+    ],
+    "max_class_share": 0.19140625,
+    "cond_accuracy": 0.12109375,
+    "score": 0.7742071085592387
+  },
+  "quality": {
+    "available": 1.0,
+    "n_fake": 8000.0,
+    "n_real": 4000.0,
+    "feature_space": "inception_v3/pool3 (2048-d, torchvision weights)",
+    "fid": 160.35183675849376,
+    "fid_real_vs_real": 12.743877963568593,
+    "kid": 0.16226016636265675,
+    "kid_std": 0.003978372565799891,
+    "kid_real_vs_real": 9.05822884549945e-05,
+    "kid_real_vs_real_std": 0.00017490664365702209,
+    "precision": 0.4822,
+    "recall": 0.12375,
+    "cs": 2.6425666332244875,
+    "cs_std": 0.05012589483515049,
+    "cs_real": 6.947237157821656,
+    "cs_real_std": 0.08377750046145796,
+    "quality_score": 0.4134520734521211
+  },
+  "gen_tag": "v7_onestep_cond_tauto_ma0.05_cg0.6_rms0.08_ce50_mm0.25_cap_tgf0_bal2.5_n25000_s0_fp16_gb256_ce692d",
+  "distill_steps": 5000,
+  "guidance_acc": 0.9566,
+  "minutes_generate": 0.7098181883494059,
+  "real_reference": "CIFAR-10 D_val + D_test, 8000 images"
+}

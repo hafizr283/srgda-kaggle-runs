@@ -1,0 +1,29 @@
+{
+  "teacher": "edm-cifar10-32x32-cond-vp",
+  "sampler": "deterministic Heun, S_churn=0, 18 steps",
+  "nfe": 35,
+  "n_fake": 8000,
+  "n_real_reference": 8000,
+  "real_reference_file": "/kaggle/input/notebooks/hafizr283/srgda-distill-20k/real_ref.npz",
+  "minutes_generate": 38.56052176554998,
+  "teacher_class_accuracy": 0.954,
+  "guidance_classifier": {
+    "acc_val": 0.9558,
+    "role": "guidance_baseline"
+  },
+  "quality": {
+    "available": 1.0,
+    "n_fake": 8000.0,
+    "n_real": 4000.0,
+    "feature_space": "inception_v3/pool3 (2048-d, torchvision weights)",
+    "fid": 10.361834223210792,
+    "fid_real_vs_real": 12.802195642470451,
+    "kid": 0.0004958503586320839,
+    "kid_std": 0.00018915085161889497,
+    "kid_real_vs_real": 5.890046798636472e-05,
+    "kid_real_vs_real_std": 0.00014551746129316836,
+    "precision": 0.717,
+    "recall": 0.624,
+    "quality_score": 0.8517250000000001
+  }
+}
