@@ -439,3 +439,15 @@ dialog::backdrop { background: #10251fb8; backdrop-filter: blur(5px); }
   .sample-gallery { grid-template-columns: repeat(4,minmax(0,1fr)); }
   .enlarge-label { display: none; }
 }
+
+/* Independent category screens have a separate protocol and ranking. */
+.category-experiment { padding: 24px; margin-top: 18px; }
+.category-experiment h3 { font-size: 18px; margin: 0; }
+.category-experiment > p { margin: 12px 0; }
+.category-table { width: 100%; min-width: 850px; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; text-align: left; }
+.category-table th, .category-table td { padding: 14px 12px; border-bottom: 1px solid var(--line); }
+.category-table thead { background: #fafbf7; color: var(--muted); }
+.category-grid { margin: 14px 0; border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+.category-grid summary { cursor: pointer; font-weight: 600; }
+.category-grid img { display: block; max-width: 100%; height: auto; margin: 12px auto 0; }
+@media (max-width: 600px) { .category-experiment { padding: 16px; } .category-experiment .version-heading { flex-wrap: wrap; gap: 10px; } }

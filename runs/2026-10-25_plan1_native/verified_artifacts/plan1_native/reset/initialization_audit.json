@@ -1,0 +1,11 @@
+{
+  "changed_G": [
+    "model.map_label.weight",
+    "model.map_label.bias"
+  ],
+  "changed_fake": [
+    "model.map_label.weight",
+    "model.map_label.bias"
+  ],
+  "passed": true
+}

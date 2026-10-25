@@ -1,0 +1,135 @@
+{
+  "updated_dhaka": "2026-10-26 Asia/Dhaka",
+  "experiments": [
+    {
+      "title": "Trial 2 progressive step reduction",
+      "status": "RUNNING",
+      "verified": false,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-trials23-progressive-teacher-20261026/versions/1",
+      "decision": "Shared two-T4 job is running. Saved outputs and stage decisions have not been verified; no shorter-step model is accepted yet.",
+      "protocol": "GPU 0: validate the 16-step native teacher, then test progressive 16 \u2192 8 \u2192 4 \u2192 2 \u2192 1 with 100\u2013200 update checks and bounded quality screens. Preserve the last accepted stage when conditioning, quality or diversity gates fail.",
+      "arms": [
+        {
+          "name": "Native conditional progressive student"
+        }
+      ]
+    },
+    {
+      "title": "Trial 3 conditional teacher downstream baseline",
+      "status": "RUNNING",
+      "verified": false,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-trials23-progressive-teacher-20261026/versions/1",
+      "decision": "Shared two-T4 job is running. Teacher pool, prices, weights and downstream outcomes are awaiting saved-output verification.",
+      "protocol": "GPU 1: balanced 5k teacher pool; compare requested labels and independent pseudo-labels. Real-only, uniform augmentation and SR-GDA use matched classifier updates across three seeds. D_val screens; no C_risk or D_test result.",
+      "arms": [
+        {
+          "name": "Real-only"
+        },
+        {
+          "name": "Requested-label uniform"
+        },
+        {
+          "name": "Requested-label SR-GDA"
+        },
+        {
+          "name": "Pseudo-label uniform"
+        },
+        {
+          "name": "Pseudo-label SR-GDA"
+        }
+      ]
+    },
+    {
+      "title": "Trial 1 native conditional initialization",
+      "status": "COMPLETE",
+      "verified": true,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-plan1-native-conditional-init-20261025/versions/1",
+      "decision": "Verified bounded null result: copied multistep teacher is exact and97.5% accurate; retained one-step student improves fresh accuracy to17.6% vs9.55% reset but misses30% early gate. Both are blurred, recall0; no accepted one-step model or extension.",
+      "protocol": "200 successful G updates each; native FP32; fresh2k class accuracy and2k/5k D_val Inception quality. Label sensitivity/std/grids use fixed500 probes. Separate2.5k/2.5k real-real FID20.08; single training seed; historical8k/4k FID incomparable. Full checkpoints remote; compact tensors/labels/counts/traces/source audited.",
+      "arms": [
+        {
+          "name": "Native retained conditioning",
+          "independent_accuracy": 0.17599999904632568,
+          "fid": 282.2109428515718,
+          "kid": 0.2450388252594864,
+          "precision": 0.257,
+          "recall": 0.0,
+          "sample_std": 0.17163173854351044,
+          "label_latent_ratio": 2.059589385986328,
+          "grid": "runs/2026-10-25_plan1_native/verified_artifacts/plan1_native/retained/grid_200.png"
+        },
+        {
+          "name": "Native reset conditioning",
+          "independent_accuracy": 0.09549999982118607,
+          "fid": 319.83490933539736,
+          "kid": 0.329491043281171,
+          "precision": 0.188,
+          "recall": 0.0,
+          "sample_std": 0.176187202334404,
+          "label_latent_ratio": 0.003486267291009426,
+          "grid": "runs/2026-10-25_plan1_native/verified_artifacts/plan1_native/reset/grid_200.png"
+        }
+      ]
+    },
+    {
+      "title": "Two T4s \u00b7 conditional DMD vs teacher pairs",
+      "status": "COMPLETE",
+      "verified": true,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-category-comparison-two-t4-20261025/versions/1",
+      "decision": "Teacher-pair regression has lower FID and slightly higher accuracy in this short screen, but neither passes the frozen joint gates. Teacher preflight accuracy is 97%; student grids repeat across requested classes. Next candidate: preserve pretrained class conditioning in a compatible student initialization. No extension.",
+      "protocol": "200 iterations per T4; 191 / 200 successful G updates; 500 independent label probes. Quality: 2k fresh fake / 5k D_val; Inception pool3; separate 2.5k / 2.5k real-real FID 20.08 (diagnostic, not a floor). Single seed; not directly comparable with historical 8k / 4k FID.",
+      "arms": [
+        {
+          "name": "GPU 0 \u00b7 conditional teacher + fake DMD",
+          "independent_accuracy": 0.09799999743700027,
+          "label_latent_ratio": 0.011719075962901115,
+          "sample_std": 0.4660376012325287,
+          "grid": "runs/2026-10-25_conditional_compare/downloads/category_compare/conditional_dmd/class_grid_200.png",
+          "fid": 227.4160145778571,
+          "kid": 0.23043374694326546,
+          "precision": 0.644,
+          "recall": 0.0038
+        },
+        {
+          "name": "GPU 1 \u00b7 direct teacher-pair regression",
+          "independent_accuracy": 0.11800000071525574,
+          "label_latent_ratio": 0.029392508789896965,
+          "sample_std": 0.3458631634712219,
+          "grid": "runs/2026-10-25_conditional_compare/downloads/category_compare/teacher_pairs/class_grid_200.png",
+          "fid": 177.4456071470687,
+          "kid": 0.15913560608874439,
+          "precision": 0.822,
+          "recall": 0.0046
+        }
+      ]
+    },
+    {
+      "title": "Stage 1 \u00b7 control and two guidance treatments",
+      "status": "COMPLETE",
+      "verified": true,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-conditioning-arms-stage-1-20261024/versions/1",
+      "decision": "Verified null result: mechanisms and control pass, but all arms remain near chance and requested-class rows repeat. No semantic conditioning improvement.",
+      "protocol": "200 iterations / 191 successful G updates each; raw final; 500 balanced samples per arm, same 50 latent columns across 10 labels. FID/KID/P/R were not requested.",
+      "arms": [
+        {
+          "name": "control",
+          "independent_accuracy": 0.10000000149011612,
+          "label_latent_ratio": 0.002905878471210599,
+          "grid": "runs/2026-10-25_stage1_361696236_browser_audit/control_class_grid_200.png"
+        },
+        {
+          "name": "arm_a",
+          "independent_accuracy": 0.09600000083446503,
+          "label_latent_ratio": 0.00868294108659029,
+          "grid": "runs/2026-10-25_stage1_361696236_browser_audit/arm_a_class_grid_200.png"
+        },
+        {
+          "name": "arm_b",
+          "independent_accuracy": 0.09399999678134918,
+          "label_latent_ratio": 0.009165356867015362,
+          "grid": "runs/2026-10-25_stage1_361696236_browser_audit/arm_b_class_grid_200.png"
+        }
+      ]
+    }
+  ]
+}

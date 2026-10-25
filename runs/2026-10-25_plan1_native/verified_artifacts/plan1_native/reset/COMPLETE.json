@@ -1,0 +1,32 @@
+{
+  "training_exit": 0,
+  "evaluation_exit": 0,
+  "iterations": 200,
+  "G_updates": 200,
+  "fake_updates": 1000,
+  "wall_seconds": 723.421042359,
+  "quality": {
+    "fid": 319.83490933539736,
+    "kid": 0.329491043281171,
+    "kid_subset_std": 0.0034446595644615926,
+    "precision": 0.188,
+    "recall": 0.0,
+    "real_vs_real": 20.078198549148965,
+    "real_vs_real_counts": [
+      2500,
+      2500
+    ],
+    "n_fake": 2000,
+    "n_real": 5000,
+    "reference": {
+      "split": "D_val",
+      "official_split": "CIFAR10 train",
+      "n": 5000,
+      "split_seed": 12345,
+      "index_sha256": "db86a8ea5119e6e0701e6e45062579cb90dd1d0fab14a8ee6ba0a401f19c7925",
+      "teacher_may_have_seen_reference": true
+    },
+    "feature_space": "torchvision Inception-v3 pool3 2048d FP32",
+    "D_test_C_risk_access": false
+  }
+}

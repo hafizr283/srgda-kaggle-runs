@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "card": 0,
+      "arm": "retained",
+      "exit_code": 0,
+      "wall_seconds": 701.002555983
+    },
+    {
+      "card": 1,
+      "arm": "reset",
+      "exit_code": 0,
+      "wall_seconds": 724.475854679
+    }
+  ],
+  "wall_seconds": 742.198135757,
+  "steps_requested_each": 200,
+  "quality_counts": [
+    2000,
+    5000
+  ],
+  "next_stage": "none; inspect saved evidence first"
+}
