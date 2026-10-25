@@ -1,7 +1,27 @@
 {
-  "updated_dhaka": "2026-10-26 01:36:18 Asia/Dhaka",
+  "updated_dhaka": "2026-10-26 01:58:28 Asia/Dhaka",
   "account": "hafizr283",
   "notebooks": [
+    {
+      "ref": "hafizr283/srgda-trial3-recovery-20261026",
+      "slug": "srgda-trial3-recovery-20261026",
+      "title": "SRGDA Trial3 Recovery 20261026",
+      "id": 140839037,
+      "is_private": true,
+      "latest_version": 1,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-trial3-recovery-20261026",
+      "listed_last_run_utc": "2026-10-25 19:55:38.880000",
+      "versions": [
+        {
+          "version_number": 1,
+          "status": "RUNNING",
+          "url": "https://www.kaggle.com/code/hafizr283/srgda-trial3-recovery-20261026/versions/1",
+          "results": [],
+          "note": "",
+          "status_evidence": "Kaggle version status API"
+        }
+      ]
+    },
     {
       "ref": "hafizr283/srgda-trials23-progressive-teacher-20261026",
       "slug": "srgda-trials23-progressive-teacher-20261026",
@@ -14,7 +34,7 @@
       "versions": [
         {
           "version_number": 1,
-          "status": "RUNNING",
+          "status": "ERROR",
           "url": "https://www.kaggle.com/code/hafizr283/srgda-trials23-progressive-teacher-20261026/versions/1",
           "results": [],
           "note": "",
