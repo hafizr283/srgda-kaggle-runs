@@ -1,0 +1,20 @@
+{
+  "label": "Old coefficient \u00b7 5,000 steps",
+  "artifact": "E:\\sammo\\_agent\\downloads\\ab5k\\quality_5k_old.json",
+  "sha256": "0e7ae151390d1773bf51f8333decd37128be6303ad4185fc8d306a4be9a5ec7a",
+  "fid": 160.35183675849376,
+  "kid": 0.16226016636265675,
+  "precision": 0.4822,
+  "recall": 0.12375,
+  "cond_accuracy": 0.12109375,
+  "n_fake": 8000.0,
+  "n_real": 4000.0,
+  "real_vs_real": 12.743877963568593,
+  "label_ratio": null,
+  "class_accuracy_1000": null,
+  "feature_space": "inception_v3/pool3 (2048-d, torchvision weights)",
+  "sample_grid": "E:\\sammo\\_agent\\downloads\\ab5k\\samples_5k_old_8x8.png",
+  "artifact_type": "archived metric summary from saved inventory; not the original full metric JSON",
+  "source_version": "https://www.kaggle.com/code/hafizr283/srgda-a-b-5k-exact-dmd/versions/1",
+  "original_artifact_path": "E:\\sammo\\_agent\\downloads\\ab5k\\quality_5k_old.json"
+}

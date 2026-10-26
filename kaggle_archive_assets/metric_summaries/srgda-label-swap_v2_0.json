@@ -1,0 +1,20 @@
+{
+  "label": "Label-swap diagnostic",
+  "artifact": "E:\\sammo\\_agent\\downloads\\swap2\\label_swap_results.json",
+  "sha256": "26fcb2bc1155181eb52ae691a332e2dd4b77682d88704c211cf7728abd258f24",
+  "fid": null,
+  "kid": null,
+  "precision": null,
+  "recall": null,
+  "cond_accuracy": null,
+  "n_fake": null,
+  "n_real": null,
+  "real_vs_real": null,
+  "label_ratio": 0.03570759112821498,
+  "class_accuracy_1000": 0.1171875,
+  "feature_space": null,
+  "sample_grid": null,
+  "artifact_type": "archived metric summary from saved inventory; not the original full metric JSON",
+  "source_version": "https://www.kaggle.com/code/hafizr283/srgda-label-swap/versions/2",
+  "original_artifact_path": "E:\\sammo\\_agent\\downloads\\swap2\\label_swap_results.json"
+}

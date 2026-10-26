@@ -1,0 +1,20 @@
+{
+  "label": "INVALID \u00b7 black sample pool",
+  "artifact": "E:\\sammo\\_agent\\downloads\\teacher3\\teacher_quality.json",
+  "sha256": "9f2e6e21a375c26810629264ffc0902dda1791708a910bdfdd1fddcdb10a1050",
+  "fid": 482.46433968182964,
+  "kid": 0.508701616920772,
+  "precision": 0.0,
+  "recall": 0.0,
+  "cond_accuracy": 0.101,
+  "n_fake": 8000.0,
+  "n_real": 4000.0,
+  "real_vs_real": 12.802176676771182,
+  "label_ratio": null,
+  "class_accuracy_1000": null,
+  "feature_space": "inception_v3/pool3 (2048-d, torchvision weights)",
+  "sample_grid": null,
+  "artifact_type": "archived metric summary from saved inventory; not the original full metric JSON",
+  "source_version": "https://www.kaggle.com/code/hafizr283/srgda-eval-teacher/versions/3",
+  "original_artifact_path": "E:\\sammo\\_agent\\downloads\\teacher3\\teacher_quality.json"
+}

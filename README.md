@@ -4,6 +4,18 @@
 
 Updated 26 October 2026, Asia/Dhaka. The site preserves notebook versions, quality metrics, independent conditioning checks, class grids and experiment evidence. It is a saved snapshot; execution status and scientific verification are separate.
 
+## Best results and latest verification
+
+Reviewed 2026-10-26 20:44:51 Asia/Dhaka. **Best completed matched downstream baseline: Trial 3 requested uniform, 62.93% mean D_val accuracy across three seeds**, versus 55.99% real-only. No learned scale-pricing gain established.
+
+**Strongest exploratory vNext candidate: fit4_plus, 64.98% versus 62.38% matched uniform on V_price only** (+2.60 pp). This was found after examining 13 policies and is not a promoted method or a full-D_val/held-out result. Highest single V_price observation is 67.30% for fit1_minus; a best seed is not a reliable method ranking.
+
+**Best accepted compact-generator screen: Trial 2 eight-step student**, 93.45% independent class obedience / FID 28.53 at 2k fake / 5k real. **Best historical student FID: cap30 at 5k, 42.31**, under 8k/4k; these FIDs cannot be directly compared. Teacher and 45k-real evaluator references are separate.
+
+Latest: pricing fit 39/39 classifiers complete but 3 of 4 gates fail; inference changes yield no qualifying winner and V_report stays closed; Astra 480 updates / 96 branches verified but all scientific gates fail, so no adaptive-controller / 5k promotion. Original failures and zero-update diagnostic remain linked.
+
+[Best-results data and source hashes](best_run_review.json) · [Pricing audit](runs/2026-10-26_website_best_review/public/fit_audit.json) · [Astra audit](runs/2026-10-26_website_best_review/public/astra_audit.json).
+
 ## Current experiments
 
 Trial 1 is artifact-verified: native pretrained conditioning versus reset class mapping, with 200 successful generator updates and 1,000 fake updates per arm. Fresh independent class accuracy is 17.6% versus 9.55%; FID is 282.21 versus 319.83. The copied multistep teacher is exact and 39/40 = 97.5% accurate in the migration check. Both one-step arms remain poor, with recall 0; retained conditioning misses the 30% early-progress gate. No one-step model or extension was accepted. [Evidence](instructions/runs/2026-10-26_plan1_native_v1_362163931.md).

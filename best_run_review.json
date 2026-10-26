@@ -1,0 +1,566 @@
+{
+  "schema": "srgda-best-run-review-v1",
+  "updated_dhaka": "2026-10-26 20:44:51 Asia/Dhaka",
+  "coverage": {
+    "notebooks": 31,
+    "versions": 38,
+    "public": 14,
+    "private": 17,
+    "verified_completed_augmentation_arms": 5,
+    "verified_fit_trajectories": 39,
+    "historical_student_fid_points": 7,
+    "closed_split_evaluation_performed": false
+  },
+  "interpretation": "These are descriptive, protocol-specific results. D_val has historical and teacher exposure. No significance, final-test or certificate claim. New 2k/5k FID is not directly comparable with historical 8k/4k FID.",
+  "findings": [
+    {
+      "scope": "MATCHED DOWNSTREAM BASELINE",
+      "name": "Trial 3 · requested uniform",
+      "value": "62.93%",
+      "metric": "Mean accuracy · all 5,000 D_val images · three seeds",
+      "summary": "Strongest mean accuracy and lowest mean NLL among the five matched 1,000-update classifier arms. Gain over real-only: 6.95 pp.",
+      "limitation": "Best baseline in that completed comparison; it does not establish a scale-pricing benefit or an untouched-holdout result.",
+      "evidence_links": [
+        {
+          "label": "All five arms and seeds",
+          "url": "#downstream"
+        },
+        {
+          "label": "Verified comparison",
+          "url": "instructions/runs/2026-10-26_trial3_classifiers_v1_140878808.md"
+        }
+      ]
+    },
+    {
+      "scope": "EXPLORATORY CANDIDATE · NOT PROMOTED",
+      "name": "vNext · fit4_plus",
+      "value": "64.98%",
+      "metric": "Mean accuracy · 2,000-image V_price only · three seeds",
+      "summary": "Highest observed mean among the 13 fit policies, versus 62.38% for matched uniform (+2.60 pp). All three paired accuracy and NLL changes favor this fixed intervention.",
+      "limitation": "Identified after examining fit outcomes. No reserved audit or fresh-seed confirmation; registered pricing gates failed. A promising candidate, not a validated winner.",
+      "evidence_links": [
+        {
+          "label": "All 13 policies",
+          "url": "#pricing-vnext"
+        },
+        {
+          "label": "Fit gates",
+          "url": "runs/2026-10-26_website_best_review/public/fit_analysis.json"
+        }
+      ]
+    },
+    {
+      "scope": "ACCEPTED COMPACT GENERATOR SCREEN",
+      "name": "Trial 2 · eight-step student",
+      "value": "8 NFE",
+      "metric": "93.45% independent class obedience · FID 28.53",
+      "summary": "Passed all six screen gates at 1,000 updates. Worst-class accuracy 85%; generation 106.64s versus 211.91s for the matched 16-step teacher.",
+      "limitation": "One generator training seed. Quality uses 2,000 fake / 5,000 D_val images. Class obedience is not downstream classifier accuracy; no accepted one-step model exists.",
+      "evidence_links": [
+        {
+          "label": "Accepted screen evidence",
+          "url": "instructions/runs/2026-10-26_trials23_v1_failure_and_trial2.md"
+        },
+        {
+          "label": "Quality JSON",
+          "url": "runs/2026-10-26_trials23/verified_artifacts/trial2/stage8/step1000_quality.json"
+        }
+      ]
+    },
+    {
+      "scope": "HISTORICAL STUDENT QUALITY",
+      "name": "cap30 · 5,000 steps",
+      "value": "42.31",
+      "metric": "FID · historical 8,000 fake / 4,000 real reference",
+      "summary": "Lowest saved student FID within the historical protocol; longer 18k/20k runs did not improve this point.",
+      "limitation": "The historical real reference includes D_test. Different counts and backend prevent direct ranking against the eight-step screen; conditioning is not established by FID.",
+      "evidence_links": [
+        {
+          "label": "Historical comparison",
+          "url": "#results"
+        },
+        {
+          "label": "Original metrics",
+          "url": "downloads/twogpu1/quality_cap30.json"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Teacher quality",
+      "summary": "The 35-NFE teacher reference has FID 18.47 at 2k fake / 5k D_val; the historical conditional EDM teacher has FID 10.36 at 8k/4k. Teachers are not distilled-student improvements, and these FIDs cannot be ranked across the two protocols.",
+      "evidence_links": [
+        {
+          "label": "35-NFE source",
+          "url": "instructions/runs/2026-10-26_trial3_classifiers_v1_140878808.md"
+        },
+        {
+          "label": "Historical teacher JSON",
+          "url": "downloads/teacher4/teacher_quality.json"
+        }
+      ]
+    },
+    {
+      "name": "Reference classifiers",
+      "summary": "The independent evaluator reaches 95.18% D_val accuracy after training on 45,000 real D_train images; the saved guidance classifier reports 95.58%. These use a different data budget and role from the 5k-real augmentation comparison and are excluded from its ranking.",
+      "evidence_links": [
+        {
+          "label": "Evaluator protocol and evidence",
+          "url": "instructions/runs/2026-10-24_conditioning_dual_v1_361555388.md"
+        }
+      ]
+    }
+  ],
+  "studies": [
+    {
+      "id": "pricing-vnext",
+      "title": "Pricing vNext · fit verified complete",
+      "scientific_status": "Scientific gates failed",
+      "decision": "All 39 classifier trajectories reached 1,000 updates. Prediction, signal resolution and linearity failed; stability passed. The study stopped before reserved audit, selection and the fresh-seed screen.",
+      "protocol": "Three matched seeds; V_price has 2,000 historically exposed D_val examples. Frozen source/inputs/checkpoints, zero AMP skips. Fit wall 32.73 minutes. Exploratory accuracy rankings below do not replace the registered gates.",
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-vnext-fit-20261026/versions/1",
+      "tables": [
+        {
+          "caption": "Registered pricing fit gates",
+          "columns": [
+            {
+              "key": "name",
+              "label": "Gate",
+              "format": "text"
+            },
+            {
+              "key": "observed",
+              "label": "Observed",
+              "format": "text"
+            },
+            {
+              "key": "required",
+              "label": "Required",
+              "format": "text"
+            },
+            {
+              "key": "decision",
+              "label": "Decision",
+              "format": "text"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Predictive MSE ratio",
+              "observed": "1.0263",
+              "required": "≤ 0.90",
+              "decision": "Fail"
+            },
+            {
+              "name": "Signal resolution",
+              "observed": "0.04836",
+              "required": "> 2× median seed SE (0.10879)",
+              "decision": "Fail"
+            },
+            {
+              "name": "Curvature / linear RMS",
+              "observed": "1.4541",
+              "required": "≤ 0.50",
+              "decision": "Fail"
+            },
+            {
+              "name": "Median policy Spearman",
+              "observed": "0.8137",
+              "required": "≥ 0.70; all defined, none negative",
+              "decision": "Pass"
+            }
+          ]
+        }
+      ],
+      "details_label": "All 13 fit policies and three matched seeds · exploratory V_price ranking",
+      "details_table": {
+        "caption": "All pricing-fit classifier accuracies on V_price; exploratory only",
+        "columns": [
+          {
+            "key": "name",
+            "label": "Policy",
+            "format": "text"
+          },
+          {
+            "key": "accuracy",
+            "label": "Mean V_price accuracy",
+            "format": "percent"
+          },
+          {
+            "key": "delta",
+            "label": "Versus uniform",
+            "format": "delta_pp"
+          },
+          {
+            "key": "nll",
+            "label": "Mean NLL",
+            "format": "nll"
+          },
+          {
+            "key": "seed1",
+            "label": "Seed 901",
+            "format": "percent"
+          },
+          {
+            "key": "seed2",
+            "label": "Seed 902",
+            "format": "percent"
+          },
+          {
+            "key": "seed3",
+            "label": "Seed 903",
+            "format": "percent"
+          }
+        ],
+        "rows": [
+          {
+            "name": "fit4_plus",
+            "accuracy": 0.6498333333333334,
+            "nll": 0.9787403357532288,
+            "seed1": 0.6675,
+            "seed2": 0.658,
+            "seed3": 0.624,
+            "delta": 0.026000000000000023,
+            "exploratory_best": true
+          },
+          {
+            "name": "fit3_minus",
+            "accuracy": 0.6406666666666667,
+            "nll": 1.0226047016307358,
+            "seed1": 0.667,
+            "seed2": 0.65,
+            "seed3": 0.605,
+            "delta": 0.016833333333333367,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit5_plus",
+            "accuracy": 0.6341666666666667,
+            "nll": 1.0304824494437066,
+            "seed1": 0.583,
+            "seed2": 0.6685,
+            "seed3": 0.651,
+            "delta": 0.010333333333333306,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit4_minus",
+            "accuracy": 0.6318333333333332,
+            "nll": 1.0314071800341431,
+            "seed1": 0.6305,
+            "seed2": 0.6085,
+            "seed3": 0.6565,
+            "delta": 0.007999999999999896,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit5_minus",
+            "accuracy": 0.6295000000000001,
+            "nll": 1.033523011397774,
+            "seed1": 0.6095,
+            "seed2": 0.6585,
+            "seed3": 0.6205,
+            "delta": 0.005666666666666709,
+            "exploratory_best": false
+          },
+          {
+            "name": "uniform",
+            "accuracy": 0.6238333333333334,
+            "nll": 1.0384446002556482,
+            "seed1": 0.659,
+            "seed2": 0.625,
+            "seed3": 0.5875,
+            "delta": 0.0,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit0_plus",
+            "accuracy": 0.6235,
+            "nll": 1.047766873852156,
+            "seed1": 0.628,
+            "seed2": 0.6315,
+            "seed3": 0.611,
+            "delta": -0.0003333333333332966,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit1_plus",
+            "accuracy": 0.62,
+            "nll": 1.0632703721699361,
+            "seed1": 0.6335,
+            "seed2": 0.656,
+            "seed3": 0.5705,
+            "delta": -0.0038333333333333552,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit1_minus",
+            "accuracy": 0.6166666666666667,
+            "nll": 1.0608682387568782,
+            "seed1": 0.673,
+            "seed2": 0.63,
+            "seed3": 0.547,
+            "delta": -0.0071666666666666545,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit2_minus",
+            "accuracy": 0.6101666666666666,
+            "nll": 1.0880134953672822,
+            "seed1": 0.602,
+            "seed2": 0.6055,
+            "seed3": 0.623,
+            "delta": -0.013666666666666716,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit0_minus",
+            "accuracy": 0.6013333333333334,
+            "nll": 1.1043374244523776,
+            "seed1": 0.584,
+            "seed2": 0.625,
+            "seed3": 0.595,
+            "delta": -0.022499999999999964,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit3_plus",
+            "accuracy": 0.5961666666666666,
+            "nll": 1.1266448189280345,
+            "seed1": 0.59,
+            "seed2": 0.65,
+            "seed3": 0.5485,
+            "delta": -0.027666666666666728,
+            "exploratory_best": false
+          },
+          {
+            "name": "fit2_plus",
+            "accuracy": 0.594,
+            "nll": 1.1494848728397822,
+            "seed1": 0.5985,
+            "seed2": 0.5905,
+            "seed3": 0.593,
+            "delta": -0.02983333333333338,
+            "exploratory_best": false
+          }
+        ]
+      },
+      "evidence_links": [
+        {
+          "label": "Verified fit evidence",
+          "url": "instructions/runs/2026-10-26_pricing_vnext_fit_v1_140908459.md"
+        },
+        {
+          "label": "Independent fit audit",
+          "url": "runs/2026-10-26_website_best_review/public/fit_audit.json"
+        },
+        {
+          "label": "Full registered analysis",
+          "url": "runs/2026-10-26_website_best_review/public/fit_analysis.json"
+        }
+      ]
+    },
+    {
+      "id": "inference-check",
+      "title": "Inference changes · verified complete",
+      "scientific_status": "No qualifying winner",
+      "decision": "Flip averaging gained 0.84 pp, below the frozen 1 pp threshold. Real-only BN recalibration lost 0.11 pp; the combination gained 0.53 pp. Baseline retained and V_report stayed closed.",
+      "protocol": "Same three completed uniform checkpoints; V_select only (1,500 images). Exact original V_price probability replay passed. No optimizer updates; script wall 58.04s. This table is not directly comparable with full-D_val or V_price accuracy.",
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-accuracy-inference-improvement-20261026/versions/1",
+      "tables": [
+        {
+          "caption": "Inference comparison on V_select only",
+          "columns": [
+            {
+              "key": "name",
+              "label": "Inference policy",
+              "format": "text"
+            },
+            {
+              "key": "accuracy",
+              "label": "Mean V_select accuracy",
+              "format": "percent"
+            },
+            {
+              "key": "delta",
+              "label": "Versus baseline",
+              "format": "delta_pp"
+            },
+            {
+              "key": "nll",
+              "label": "Mean NLL",
+              "format": "nll"
+            },
+            {
+              "key": "decision",
+              "label": "Decision",
+              "format": "text"
+            }
+          ],
+          "rows": [
+            {
+              "name": "baseline",
+              "accuracy": 0.618,
+              "delta": 0.0,
+              "nll": 1.0920611976854244,
+              "decision": "Control retained"
+            },
+            {
+              "name": "flip",
+              "accuracy": 0.6264444444444445,
+              "delta": 0.008444444444444477,
+              "nll": 1.0621952648292796,
+              "decision": "No promotion"
+            },
+            {
+              "name": "real_bn",
+              "accuracy": 0.6168888888888889,
+              "delta": -0.0011111111111110628,
+              "nll": 1.0939187274353364,
+              "decision": "No promotion"
+            },
+            {
+              "name": "real_bn_flip",
+              "accuracy": 0.6233333333333334,
+              "delta": 0.005333333333333412,
+              "nll": 1.063672922555001,
+              "decision": "No promotion"
+            }
+          ]
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "Verified evidence",
+          "url": "instructions/runs/2026-10-26_accuracy_inference_v1_140946989.md"
+        },
+        {
+          "label": "Independent audit",
+          "url": "runs/2026-10-26_website_best_review/public/inference_audit.json"
+        },
+        {
+          "label": "All selection records",
+          "url": "runs/2026-10-26_website_best_review/public/inference_selection.json"
+        }
+      ]
+    },
+    {
+      "id": "astra-probe",
+      "title": "Astra’s mechanism probe · recovery verified",
+      "scientific_status": "Scientific gates failed",
+      "decision": "All 480 virtual updates across 96 branches and 24 groups are independently verified. Two-channel prediction error is 3.78× the zero-effect baseline; all three scientific gates failed. Adaptive-controller and 5,000-step stages stopped.",
+      "protocol": "Three step-200 parent seeds, four loss/normalization settings, five matched updates per branch. TRAIN-only anchors, not generalization data. Initial ERROR and zero-update FP64 diagnostic preserved; recovery reused 240 verified updates and computed only the missing 240. Cumulative script wall 11.60 min; platform overhead separate. No D_val tensors constructed.",
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-astra-mechanism-recovery-20261026/versions/1",
+      "tables": [
+        {
+          "caption": "Astra mechanism gates by seed",
+          "columns": [
+            {
+              "key": "seed",
+              "label": "Seed",
+              "format": "text"
+            },
+            {
+              "key": "two",
+              "label": "Two-channel MSE",
+              "format": "mse"
+            },
+            {
+              "key": "zero",
+              "label": "Zero-effect MSE",
+              "format": "mse"
+            },
+            {
+              "key": "opposing",
+              "label": "Stable opposing groups",
+              "format": "text"
+            },
+            {
+              "key": "decision",
+              "label": "Decision",
+              "format": "text"
+            }
+          ],
+          "rows": [
+            {
+              "seed": 2026102901,
+              "two": 0.0003494215308930204,
+              "zero": 0.00013214451821054045,
+              "opposing": "2/8; require ≥2",
+              "decision": "Fail"
+            },
+            {
+              "seed": 2026102902,
+              "two": 0.0006189616107504166,
+              "zero": 9.58195140500189e-05,
+              "opposing": "1/8; require ≥2",
+              "decision": "Fail"
+            },
+            {
+              "seed": 2026102903,
+              "two": 0.0010371826910121043,
+              "zero": 0.00030279740693499936,
+              "opposing": "1/8; require ≥2",
+              "decision": "Fail"
+            }
+          ]
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "Verified completion and stop",
+          "url": "instructions/runs/2026-10-26_astras_plan_mechanism_verified_stop.md"
+        },
+        {
+          "label": "Independent combined audit",
+          "url": "runs/2026-10-26_website_best_review/public/astra_audit.json"
+        },
+        {
+          "label": "Preserved partial failure",
+          "url": "runs/2026-10-26_website_best_review/public/astra_partial_audit.json"
+        },
+        {
+          "label": "Precision diagnostic",
+          "url": "runs/2026-10-26_website_best_review/public/astra_precision_audit.json"
+        }
+      ]
+    }
+  ],
+  "single_fit_maximum": {
+    "policy": "fit1_minus",
+    "seed": 2026102901,
+    "accuracy": 0.673,
+    "limitation": "Single highest V_price observation, not a method selection or comparable full-D_val winner."
+  },
+  "source_evidence": [
+    {
+      "path": "experiments/2026-10-26_pricing_vnext/evidence/fit_verified/fit_report.json",
+      "sha256": "644be4ea2d253564bd07d04c1b331f654f8f2cddf68e8fd8c3ff1faa004a7ff5"
+    },
+    {
+      "path": "experiments/2026-10-26_pricing_vnext/evidence/fit_verified/audit.json",
+      "sha256": "74df96d2c0a9623601a0be7a503f14e127c7b4498f4f0f63e4d8d3890228861e"
+    },
+    {
+      "path": "experiments/2026-10-26_accuracy_improvement/evidence/verified.json",
+      "sha256": "e92c209e6baf619d06d907795be802454551392dfdfe70e36e8860ceb0cd0eec"
+    },
+    {
+      "path": "experiments/astras_plan/recovery_v1/evidence/verified.json",
+      "sha256": "f034dc6ae316b771ae08522677b4c9741bbe786ea5edcdad199e1fb2d6e46c94"
+    },
+    {
+      "path": "runs/2026-10-26_trial3_classifiers/final_summary.json",
+      "sha256": "6813d031d10803f96d6a207a6434d5065c6b8eb72ab81f024e7b21d5d5494381"
+    },
+    {
+      "path": "runs/2026-10-26_trial3_classifiers/classifier_verification.json",
+      "sha256": "35b04c752f21aada941b15f8d1dd2da796e2954e5e69ce292563605fe96ad83f"
+    },
+    {
+      "path": "runs/2026-10-26_trials23/verified_artifacts/trial2/stage8/step1000_quality.json",
+      "sha256": "8c62325c7a9e3686174b9b12e0e71743b72a6148010d5ec6b388b08755fd7a32"
+    }
+  ]
+}

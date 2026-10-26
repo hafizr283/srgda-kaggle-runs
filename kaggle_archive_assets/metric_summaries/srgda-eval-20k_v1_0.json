@@ -1,0 +1,20 @@
+{
+  "label": "20,000-step student",
+  "artifact": "E:\\sammo\\_agent\\downloads\\eval20k\\quality_20k.json",
+  "sha256": "5848b1432118bca1cdba2271b400e616611a7bea952853fbb7b974f00042b259",
+  "fid": 88.88134859241438,
+  "kid": 0.07895454727389277,
+  "precision": 0.5482,
+  "recall": 0.22675,
+  "cond_accuracy": 0.1328125,
+  "n_fake": 8000.0,
+  "n_real": 4000.0,
+  "real_vs_real": 12.74387796729684,
+  "label_ratio": null,
+  "class_accuracy_1000": null,
+  "feature_space": "inception_v3/pool3 (2048-d, torchvision weights)",
+  "sample_grid": "E:\\sammo\\_agent\\downloads\\eval20k\\samples_8x8.png",
+  "artifact_type": "archived metric summary from saved inventory; not the original full metric JSON",
+  "source_version": "https://www.kaggle.com/code/hafizr283/srgda-eval-20k/versions/1",
+  "original_artifact_path": "E:\\sammo\\_agent\\downloads\\eval20k\\quality_20k.json"
+}

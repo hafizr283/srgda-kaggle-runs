@@ -1,0 +1,19 @@
+{
+  "schema": "astra-independent-partial-audit-v1",
+  "compute_complete": false,
+  "scientific_gate_evaluated": false,
+  "notebook_id": 140994825,
+  "version": 1,
+  "completed_virtual_updates": 240,
+  "completed_groups": 12,
+  "completed_branches": 48,
+  "wall_seconds": 313.612125091,
+  "files": 223,
+  "bytes": 2246858,
+  "protocol_digest": "30f98487f9253f614c3906a74929cd66e1b7c33c287c7553b8084bcb2e925cf0",
+  "retrieval_manifest_sha256": "944856fdb4a8d81c160cab3b21a09bdd918d8902319cd47783445fed7055bed9",
+  "verified_worker": 0,
+  "failure": "worker1 real-moment FP32 isolation assertion; diagnostic numbers not saved by v1",
+  "D_val_constructed": false,
+  "D_test_C_risk_access": false
+}
