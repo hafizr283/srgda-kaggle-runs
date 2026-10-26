@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "card": 0,
+      "trial": 3,
+      "phase": "classify",
+      "exit_code": 0,
+      "arms": [
+        "real_only",
+        "requested_uniform",
+        "requested_srgda"
+      ],
+      "wall_seconds": 677.2770497409999
+    },
+    {
+      "card": 1,
+      "trial": 3,
+      "phase": "classify",
+      "exit_code": 0,
+      "arms": [
+        "pseudo_uniform",
+        "pseudo_srgda"
+      ],
+      "wall_seconds": 518.569394395
+    }
+  ],
+  "wall_seconds": 693.130045872,
+  "all_child_exits_zero": true
+}

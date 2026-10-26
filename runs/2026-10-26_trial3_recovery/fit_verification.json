@@ -1,0 +1,84 @@
+{
+  "fit_verified": true,
+  "downstream_complete": false,
+  "controller": {
+    "tasks": [
+      {
+        "card": 0,
+        "trial": 3,
+        "phase": "fit",
+        "exit_code": 0,
+        "arms": null,
+        "wall_seconds": 1238.350888213
+      },
+      {
+        "card": 0,
+        "trial": 3,
+        "phase": "classify",
+        "exit_code": 1,
+        "arms": [
+          "real_only",
+          "requested_uniform",
+          "requested_srgda"
+        ],
+        "wall_seconds": 21.720357956000043
+      },
+      {
+        "card": 1,
+        "trial": 3,
+        "phase": "classify",
+        "exit_code": 1,
+        "arms": [
+          "pseudo_uniform",
+          "pseudo_srgda"
+        ],
+        "wall_seconds": 23.127626158999874
+      }
+    ],
+    "wall_seconds": 1279.832964975,
+    "all_child_exits_zero": false
+  },
+  "labels": {
+    "requested": {
+      "signed_prices": [
+        0.0030098498369277586,
+        -0.0031508205209227493,
+        -0.5332536900139971
+      ],
+      "deployed_prices": [
+        0.0030098498369277586,
+        0.0,
+        0.0
+      ],
+      "ess": 0.8000877540866279,
+      "beta": 0.6988897569032949,
+      "score_before": 0.12417501793242991,
+      "score_after": 0.12360055139288306,
+      "checkpoint_sha256": "20f791b5745595b759d7f11c82d1addb3d1972ba68f38e37d07fd57f00d9a764",
+      "profile_sha256": "9753cdb8aa2a0287f2966407ed2fedb13164a67ac1068f362f06bdc96bde71c5",
+      "weights_sha256": "683737657eb5d2b90ce77a4195ac8e75032bef24989ea338dbc37fa89c1bbcfc"
+    },
+    "pseudo": {
+      "signed_prices": [
+        -0.0036508262216789276,
+        -0.02129599002619201,
+        -0.5411926898796169
+      ],
+      "deployed_prices": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ess": 0.9997538369750113,
+      "beta": 0.0,
+      "score_before": 0.1242280057631433,
+      "score_after": 0.12364919134415686,
+      "checkpoint_sha256": "0b37aa5e736443671ce53a97fa46be39eb7027c1c3cb83d8fe28f7ef518d860c",
+      "profile_sha256": "b877624e9c61a20d3c6a7bd195a6efe4129c45b47846de4d0ae226ddfc3e4990",
+      "weights_sha256": "9034b50672f138117a0e6d93228fc2b9197cfabf76a23de92996706473f32a27"
+    }
+  },
+  "reason": "both classifier workers saved step100 then NameError agreement; no evaluation completed",
+  "files": 36,
+  "bytes": 93660261
+}

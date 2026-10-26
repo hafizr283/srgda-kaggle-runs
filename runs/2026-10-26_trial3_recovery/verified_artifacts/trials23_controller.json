@@ -1,0 +1,37 @@
+{
+  "tasks": [
+    {
+      "card": 0,
+      "trial": 3,
+      "phase": "fit",
+      "exit_code": 0,
+      "arms": null,
+      "wall_seconds": 1238.350888213
+    },
+    {
+      "card": 0,
+      "trial": 3,
+      "phase": "classify",
+      "exit_code": 1,
+      "arms": [
+        "real_only",
+        "requested_uniform",
+        "requested_srgda"
+      ],
+      "wall_seconds": 21.720357956000043
+    },
+    {
+      "card": 1,
+      "trial": 3,
+      "phase": "classify",
+      "exit_code": 1,
+      "arms": [
+        "pseudo_uniform",
+        "pseudo_srgda"
+      ],
+      "wall_seconds": 23.127626158999874
+    }
+  ],
+  "wall_seconds": 1279.832964975,
+  "all_child_exits_zero": false
+}

@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "resumed_arms": [
+    "real_only_seed20261026",
+    "pseudo_uniform_seed20261026"
+  ],
+  "all_45_confusions_reconstructed_from_official_train_D_val_labels": true,
+  "all_fit_artifacts_preserved": true,
+  "same_classifier_protocol_across_workers": true,
+  "final_checkpoints_finite": "GPU runner audit; full states retained remotely",
+  "actual_rows": 15
+}

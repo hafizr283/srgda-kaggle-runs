@@ -1,0 +1,15 @@
+# Trial3 classifier-only completion
+
+Recorded before launch, 2026-10-26 Asia/Dhaka. Existing authorization: complete Trials2/3 and publish verified results. Original95minute bounded work budget; original wall34.55minutes and recovery-v1 wall21.33minutes leave room for this30minute controller cap. Kaggle bootstrap/setup overhead is additional. Current quota28.28h remaining; refresh2026-10-31.
+
+Recovery v1 completed both200-update score fits, both5000×3profiles, groups/prices/weights, then each classifier worker failed on missing agreement import after saving100successful updates. Fits are verified separately in instructions/runs/2026-10-26_trial3_recovery_v1_fit_verified_failure.md. No classifier outcome is available or used to change the recipe.
+
+Repair: import the existing agreement function. Reuse all fitted artifacts exactly, without generator/pool/score/profile/price work. Restore two100/1000full classifier states (real-only and pseudo-uniform, seed20261026) with model/optimizer/scaler/four sampling and augmentation RNGs/globalCPU/CUDA RNG; regenerate the interrupted100step evaluation then perform900further successful updates. Other13classifiers start fresh at the original seeds. All15arms must finish exactly1000updates under the original objective, batch sampling, LR horizon and model settings. Save resume audits including original checkpoint hashes. Failure to restore identity or complete any arm leaves the experiment pending.
+
+Ten CPU tests pass: exact next update matches uninterrupted execution, incompatible seed/horizon/source/pool/nonfinite/incomplete states rejected, profile seeds valid and batch invariant. Runtime import/metric call checked. Original train and balanced_subset ASTs match after removing only the new resume branch;41bundled modules parse;38of39old modules unchanged plus two additions. The original module and failed notebook remain preserved.
+
+New isolated notebook hafizr283/srgda-trial3-classifiers-20261026. Two T4s with the same arm partitions as recovery v1; shared30minute controller deadline and saving reserve. Stop on failure/cutoff; do not extend automatically. Restore21artifacts/241,453,722bytes directly at Kaggle; length/SHA256 pins include streaming hashes of both remote100-update states. No full model downloaded to local storage. Exact restore/source proofs here.
+
+Interpretation unchanged: three paired classifier seeds, sensitized5kreal/5ksynthetic pool, all5kD_val for reports; D_val also learns prices and may have been used by public teacher. C_risk/D_test unused. Requested positive prices yield ESS.80009. Pseudo prices are all clipped to zero, leaving class-prior correction only; its comparison cannot show scale-pricing benefit. No one-step/convergence/Tier1/certificate claim.
+
+At completion audit exact version/source/restore, exits, all15arms/three seeds,100/200/1000evaluations, full traces/confusions/predictions/counts, resume steps/hashes and finite states. Preserve fitting artifacts and original failures. Update four handoff files with one evidence record and publish/verify both website pages.

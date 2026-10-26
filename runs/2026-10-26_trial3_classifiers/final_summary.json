@@ -1,0 +1,85 @@
+{
+  "record": "2026-10-26_trial3_classifiers_v1_140878808.md",
+  "arms": [
+    {
+      "name": "Real-only",
+      "downstream_accuracy": 0.5598666667938232,
+      "seed_std_pp": 3.7017455580546104,
+      "mean_nll": 1.2262402750651042,
+      "successful_updates": 1000,
+      "seed_accuracies": [
+        0.5192000269889832,
+        0.5916000008583069,
+        0.5687999725341797
+      ]
+    },
+    {
+      "name": "Requested uniform",
+      "downstream_accuracy": 0.6293333371480306,
+      "seed_std_pp": 3.3473794425898906,
+      "mean_nll": 1.0310836385091147,
+      "successful_updates": 1000,
+      "seed_accuracies": [
+        0.6244000196456909,
+        0.6650000214576721,
+        0.5985999703407288
+      ]
+    },
+    {
+      "name": "Requested SR-GDA",
+      "downstream_accuracy": 0.6201333403587341,
+      "seed_std_pp": 2.0966969362127856,
+      "mean_nll": 1.0555877237955729,
+      "successful_updates": 1000,
+      "seed_accuracies": [
+        0.6182000041007996,
+        0.6420000195503235,
+        0.6001999974250793
+      ]
+    },
+    {
+      "name": "Pseudo uniform",
+      "downstream_accuracy": 0.5978666543960571,
+      "seed_std_pp": 3.6125538138198716,
+      "mean_nll": 1.11585669148763,
+      "successful_updates": 1000,
+      "seed_accuracies": [
+        0.5669999718666077,
+        0.5889999866485596,
+        0.6376000046730042
+      ]
+    },
+    {
+      "name": "Pseudo SR-GDA",
+      "downstream_accuracy": 0.6196000178654989,
+      "seed_std_pp": 2.7713541747230175,
+      "mean_nll": 1.0618519266764324,
+      "successful_updates": 1000,
+      "seed_accuracies": [
+        0.5924000144004822,
+        0.6478000283241272,
+        0.6186000108718872
+      ]
+    }
+  ],
+  "paired": {
+    "requested": {
+      "differences_pp": [
+        -0.6200015544891357,
+        -2.3000001907348633,
+        0.1600027084350586
+      ],
+      "mean_pp": -0.9199996789296468
+    },
+    "pseudo": {
+      "differences_pp": [
+        2.540004253387451,
+        5.880004167556763,
+        -1.8999993801116943
+      ],
+      "mean_pp": 2.1733363469441733
+    }
+  },
+  "summary": "Requested SR-GDA minus uniform: -0.92 pp; pseudo: +2.17 pp.",
+  "stamp": "2026-10-26 08:05:53 Asia/Dhaka"
+}

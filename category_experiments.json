@@ -1,5 +1,5 @@
 {
-  "updated_dhaka": "2026-10-26 Asia/Dhaka",
+  "updated_dhaka": "2026-10-26 08:05:53 Asia/Dhaka",
   "experiments": [
     {
       "title": "Trial 2 progressive step reduction",
@@ -43,26 +43,107 @@
     },
     {
       "title": "Trial 3 conditional teacher downstream baseline",
-      "status": "RUNNING",
-      "verified": false,
-      "url": "https://www.kaggle.com/code/hafizr283/srgda-trial3-recovery-20261026/versions/1",
-      "decision": "Original v1 failed at the first profile-noise seed: PyTorch integer overflow. The cached 5k teacher pool is verified (95.24% requested-class accuracy; 90% worst class), and its requested score fit reached 200 updates. A bounded recovery is running; no downstream results are verified.",
-      "protocol": "Recover exact pool and score hashes; reduce profile seeds modulo 2^64. Fit profiles/prices/weights, then divide five classifier arms \u00d7 three seeds across both T4s with matched 1,000-update budgets. Recovery cap 60min. Same requested/pseudo-label pool, no filtering, D_val used for prices and reporting. C_risk/D_test reserved. Teacher 35NFE FID 18.47 on 2k/5k screening counts.",
+      "status": "COMPLETE",
+      "verified": true,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-trial3-classifiers-20261026/versions/1",
+      "decision": "Verified: all five arms and three matched seeds completed 1,000 successful updates. Requested SR-GDA minus uniform: -0.92 pp; pseudo: +2.17 pp. See all seed results below; this is a descriptive D_val comparison.",
+      "protocol": "Same 5k teacher pool and balanced 5k real training set. Prices learned on D_val; all 5k D_val images used for reporting. Public teacher may have seen D_val. Requested weights achieve ESS 0.8001. All pseudo-label prices clip to zero, so those weights only correct class priors; their comparison does not isolate scale pricing. No C_risk, D_test, one-step generator or certificate result.",
       "arms": [
         {
-          "name": "Real-only"
+          "name": "Real-only",
+          "downstream_accuracy": 0.5598666667938232,
+          "seed_std_pp": 3.7017455580546104,
+          "mean_nll": 1.2262402750651042,
+          "successful_updates": 1000,
+          "seed_accuracies": [
+            0.5192000269889832,
+            0.5916000008583069,
+            0.5687999725341797
+          ]
         },
         {
-          "name": "Requested-label uniform"
+          "name": "Requested uniform",
+          "downstream_accuracy": 0.6293333371480306,
+          "seed_std_pp": 3.3473794425898906,
+          "mean_nll": 1.0310836385091147,
+          "successful_updates": 1000,
+          "seed_accuracies": [
+            0.6244000196456909,
+            0.6650000214576721,
+            0.5985999703407288
+          ]
         },
         {
-          "name": "Requested-label SR-GDA"
+          "name": "Requested SR-GDA",
+          "downstream_accuracy": 0.6201333403587341,
+          "seed_std_pp": 2.0966969362127856,
+          "mean_nll": 1.0555877237955729,
+          "successful_updates": 1000,
+          "seed_accuracies": [
+            0.6182000041007996,
+            0.6420000195503235,
+            0.6001999974250793
+          ]
         },
         {
-          "name": "Pseudo-label uniform"
+          "name": "Pseudo uniform",
+          "downstream_accuracy": 0.5978666543960571,
+          "seed_std_pp": 3.6125538138198716,
+          "mean_nll": 1.11585669148763,
+          "successful_updates": 1000,
+          "seed_accuracies": [
+            0.5669999718666077,
+            0.5889999866485596,
+            0.6376000046730042
+          ]
         },
         {
-          "name": "Pseudo-label SR-GDA"
+          "name": "Pseudo SR-GDA",
+          "downstream_accuracy": 0.6196000178654989,
+          "seed_std_pp": 2.7713541747230175,
+          "mean_nll": 1.0618519266764324,
+          "successful_updates": 1000,
+          "seed_accuracies": [
+            0.5924000144004822,
+            0.6478000283241272,
+            0.6186000108718872
+          ]
+        }
+      ],
+      "result_kind": "downstream",
+      "classifier_seeds": [
+        20261026,
+        20261027,
+        20261028
+      ],
+      "evidence_links": [
+        {
+          "label": "Verified experiment evidence",
+          "url": "instructions/runs/2026-10-26_trial3_classifiers_v1_140878808.md"
+        },
+        {
+          "label": "All classifier metrics (JSON)",
+          "url": "runs/2026-10-26_trial3_classifiers/verified_artifacts/trial3/RESULT.json"
+        },
+        {
+          "label": "Recovery history",
+          "url": "instructions/runs/2026-10-26_trial3_recovery_v1_fit_verified_failure.md"
+        },
+        {
+          "label": "Preregistered recovery",
+          "url": "runs/2026-10-26_trial3_classifiers/preregistration.md"
+        },
+        {
+          "label": "Cached teacher pool grid",
+          "url": "runs/2026-10-26_trial3_classifiers/verified_artifacts/trial3/teacher_pool_grid.png"
+        },
+        {
+          "label": "Raw artifact verification",
+          "url": "runs/2026-10-26_trial3_classifiers/classifier_verification.json"
+        },
+        {
+          "label": "Source and trace checks",
+          "url": "runs/2026-10-26_trial3_classifiers/supplemental_verification.json"
         }
       ]
     },

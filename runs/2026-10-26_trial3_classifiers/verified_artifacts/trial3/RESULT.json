@@ -1,0 +1,598 @@
+{
+  "status": "bounded_trial_complete",
+  "training_exit": 0,
+  "evaluation_exit": 0,
+  "pool": {
+    "count": 5000,
+    "requested_counts": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500
+    ],
+    "pseudo_counts": [
+      506,
+      497,
+      480,
+      504,
+      500,
+      511,
+      503,
+      497,
+      501,
+      501
+    ],
+    "conditioning": {
+      "accuracy": 0.9524000287055969,
+      "class_names": [
+        "airplane",
+        "automobile",
+        "bird",
+        "cat",
+        "deer",
+        "dog",
+        "frog",
+        "horse",
+        "ship",
+        "truck"
+      ],
+      "requested_counts": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "per_class_accuracy": [
+        0.9580000042915344,
+        0.9760000109672546,
+        0.9179999828338623,
+        0.8999999761581421,
+        0.9580000042915344,
+        0.9259999990463257,
+        0.9660000205039978,
+        0.972000002861023,
+        0.9739999771118164,
+        0.9760000109672546
+      ],
+      "confusion_rows_requested_columns_predicted": [
+        [
+          479,
+          1,
+          3,
+          2,
+          0,
+          0,
+          1,
+          1,
+          10,
+          3
+        ],
+        [
+          0,
+          488,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          2,
+          8
+        ],
+        [
+          14,
+          1,
+          459,
+          8,
+          5,
+          4,
+          8,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          7,
+          450,
+          6,
+          26,
+          6,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2,
+          2,
+          479,
+          6,
+          3,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          30,
+          4,
+          463,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          9,
+          1,
+          3,
+          483,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          5,
+          6,
+          0,
+          486,
+          0,
+          0
+        ],
+        [
+          6,
+          2,
+          2,
+          0,
+          0,
+          1,
+          1,
+          0,
+          487,
+          1
+        ],
+        [
+          2,
+          5,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          2,
+          488
+        ]
+      ],
+      "predicted_counts": [
+        506,
+        497,
+        480,
+        504,
+        500,
+        511,
+        503,
+        497,
+        501,
+        501
+      ]
+    },
+    "confidence_mean": 0.9304280281066895,
+    "rejection_rate": 0.0,
+    "filtering": false,
+    "finite": true,
+    "sha256": "9f1278903c357b96af1707ec3d27fb163c2c3d923cf1c6d88de99ad63dbba9fb",
+    "nfe": 35,
+    "within_class_pixel_std": [
+      0.5061050057411194,
+      0.5303286910057068,
+      0.4786575734615326,
+      0.5260574817657471,
+      0.43199440836906433,
+      0.5160247683525085,
+      0.46260762214660645,
+      0.49908447265625,
+      0.4902592599391937,
+      0.5114553570747375
+    ]
+  },
+  "teacher_quality": {
+    "fid": 18.469729082993922,
+    "kid": 0.0004497027343639015,
+    "kid_subset_std": 0.00019054589151821355,
+    "precision": 0.715,
+    "recall": 0.6506,
+    "real_vs_real": 20.078198549148965,
+    "real_vs_real_counts": [
+      2500,
+      2500
+    ],
+    "n_fake": 2000,
+    "n_real": 5000,
+    "reference": {
+      "split": "D_val",
+      "official_split": "CIFAR10 train",
+      "n": 5000,
+      "split_seed": 12345,
+      "index_sha256": "db86a8ea5119e6e0701e6e45062579cb90dd1d0fab14a8ee6ba0a401f19c7925",
+      "teacher_may_have_seen_reference": true
+    },
+    "D_test_C_risk_access": false,
+    "feature_space": "torchvision Inception-v3 pool3 2048d FP32",
+    "nfe": 35,
+    "generation_seconds": 498.59553038600006,
+    "seconds_per_image": 0.24929776519300004,
+    "conditioning": {
+      "accuracy": 0.9359999895095825,
+      "class_names": [
+        "airplane",
+        "automobile",
+        "bird",
+        "cat",
+        "deer",
+        "dog",
+        "frog",
+        "horse",
+        "ship",
+        "truck"
+      ],
+      "requested_counts": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "per_class_accuracy": [
+        0.9549999833106995,
+        0.9900000095367432,
+        0.9049999713897705,
+        0.8500000238418579,
+        0.9150000214576721,
+        0.8700000047683716,
+        0.9649999737739563,
+        0.9599999785423279,
+        0.9700000286102295,
+        0.9800000190734863
+      ],
+      "confusion_rows_requested_columns_predicted": [
+        [
+          191,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          198,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          6,
+          1,
+          181,
+          4,
+          1,
+          0,
+          3,
+          3,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          4,
+          170,
+          3,
+          15,
+          4,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          3,
+          4,
+          183,
+          2,
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          21,
+          1,
+          174,
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          3,
+          2,
+          0,
+          0,
+          193,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          0,
+          192,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          194,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          196
+        ]
+      ],
+      "predicted_counts": [
+        205,
+        205,
+        194,
+        205,
+        191,
+        192,
+        203,
+        203,
+        203,
+        199
+      ]
+    },
+    "std": 0.5107598900794983,
+    "seed": 2026102602,
+    "batch": 32
+  },
+  "classification": [
+    {
+      "arm": "real_only",
+      "seed": 20261026,
+      "accuracy": 0.5192000269889832,
+      "nll": 1.3148420043945312,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "requested_uniform",
+      "seed": 20261026,
+      "accuracy": 0.6244000196456909,
+      "nll": 1.038965606689453,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "requested_srgda",
+      "seed": 20261026,
+      "accuracy": 0.6182000041007996,
+      "nll": 1.049404852294922,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "real_only",
+      "seed": 20261027,
+      "accuracy": 0.5916000008583069,
+      "nll": 1.149349005126953,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "requested_uniform",
+      "seed": 20261027,
+      "accuracy": 0.6650000214576721,
+      "nll": 0.96387470703125,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "requested_srgda",
+      "seed": 20261027,
+      "accuracy": 0.6420000195503235,
+      "nll": 1.0168580810546874,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "real_only",
+      "seed": 20261028,
+      "accuracy": 0.5687999725341797,
+      "nll": 1.2145298156738282,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "requested_uniform",
+      "seed": 20261028,
+      "accuracy": 0.5985999703407288,
+      "nll": 1.0904106018066406,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "requested_srgda",
+      "seed": 20261028,
+      "accuracy": 0.6001999974250793,
+      "nll": 1.1005002380371094,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "pseudo_uniform",
+      "seed": 20261026,
+      "accuracy": 0.5669999718666077,
+      "nll": 1.1880798706054687,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "pseudo_srgda",
+      "seed": 20261026,
+      "accuracy": 0.5924000144004822,
+      "nll": 1.1232232360839844,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "pseudo_uniform",
+      "seed": 20261027,
+      "accuracy": 0.5889999866485596,
+      "nll": 1.1346884460449218,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "pseudo_srgda",
+      "seed": 20261027,
+      "accuracy": 0.6478000283241272,
+      "nll": 0.991979541015625,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "pseudo_uniform",
+      "seed": 20261028,
+      "accuracy": 0.6376000046730042,
+      "nll": 1.0248017578125,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    },
+    {
+      "arm": "pseudo_srgda",
+      "seed": 20261028,
+      "accuracy": 0.6186000108718872,
+      "nll": 1.0703530029296875,
+      "successful_updates": 1000,
+      "amp_skips": 0
+    }
+  ],
+  "summary": {
+    "real_only": {
+      "accuracy_mean": 0.5598666667938232,
+      "training_seed_std": 0.0370174555805461,
+      "accuracies": [
+        0.5192000269889832,
+        0.5916000008583069,
+        0.5687999725341797
+      ]
+    },
+    "requested_uniform": {
+      "accuracy_mean": 0.6293333371480306,
+      "training_seed_std": 0.03347379442589891,
+      "accuracies": [
+        0.6244000196456909,
+        0.6650000214576721,
+        0.5985999703407288
+      ]
+    },
+    "requested_srgda": {
+      "accuracy_mean": 0.6201333403587341,
+      "training_seed_std": 0.020966969362127857,
+      "accuracies": [
+        0.6182000041007996,
+        0.6420000195503235,
+        0.6001999974250793
+      ]
+    },
+    "pseudo_uniform": {
+      "accuracy_mean": 0.5978666543960571,
+      "training_seed_std": 0.036125538138198715,
+      "accuracies": [
+        0.5669999718666077,
+        0.5889999866485596,
+        0.6376000046730042
+      ]
+    },
+    "pseudo_srgda": {
+      "accuracy_mean": 0.6196000178654989,
+      "training_seed_std": 0.027713541747230175,
+      "accuracies": [
+        0.5924000144004822,
+        0.6478000283241272,
+        0.6186000108718872
+      ]
+    }
+  },
+  "wall_seconds": 693.129747179,
+  "D_test_C_risk_access": false,
+  "decision": "descriptive sensitized D_val baseline; reused verified fit; resumed two interrupted classifiers; completed 15 matched classifiers; no certificate or one-step claim"
+}

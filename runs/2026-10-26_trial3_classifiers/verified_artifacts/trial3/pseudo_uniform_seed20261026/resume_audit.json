@@ -1,0 +1,7 @@
+{
+  "checkpoint_sha256": "e4a796902bf9c8950127458b84debc640a3ba66d846d208af1639c183535ddc0",
+  "restored_successful_updates": 100,
+  "target_successful_updates": 1000,
+  "model_optimizer_scaler_rng_restored": true,
+  "finite": true
+}

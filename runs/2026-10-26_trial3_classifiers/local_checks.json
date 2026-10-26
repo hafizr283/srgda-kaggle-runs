@@ -1,0 +1,9 @@
+{
+  "tests_passed": 10,
+  "original_training_AST_unchanged_after_excluding_resume": true,
+  "balanced_sampling_AST_unchanged": true,
+  "new_source_modules_parse": 41,
+  "new_controller_and_resume_pyflakes": "clean",
+  "existing_pyflakes_closure_deletion_false_positives": "teacher/fit_x/fake inspected; bound at invocation",
+  "resume_limit": "only100/1000 full classifier states"
+}

@@ -10,7 +10,17 @@ Trial 1 is artifact-verified: native pretrained conditioning versus reset class 
 
 Trial 2 is verified complete: the eight-step student passed its gates at 1,000 updates, with 93.45% independent class accuracy, 85% worst-class accuracy and FID 28.53. Generation took 106.64 seconds for 2,000 images versus 211.91 seconds for the 16-step teacher. The four-step stage failed at 500 updates (FID 40.15), so compression stopped. This is a single training-seed screen. [Evidence](instructions/runs/2026-10-26_trials23_v1_failure_and_trial2.md).
 
-Trial 3 failed when the first profiling seed exceeded PyTorch's integer range. Its saved 5,000-image teacher pool is verified at 95.24% overall and 90% worst-class accuracy, and the requested score fit completed 200 updates. A bounded recovery reuses those artifacts, fixes the seed and splits the remaining matched classifiers across two T4s. Downstream results remain unverified. [Recovery run](https://www.kaggle.com/code/hafizr283/srgda-trial3-recovery-20261026/versions/1) · [Recovery preregistration](runs/2026-10-26_trial3_recovery/preregistration.md).
+Trial 3 is verified complete: all five classifier arms and three matched seeds reached 1,000 successful updates. Requested SR-GDA minus uniform: -0.92 pp; pseudo: +2.17 pp. Two interrupted classifiers resumed from their saved 100-update states; all fitted teacher-pool artifacts were reused.
+
+| Classifier | Mean accuracy | Seed std (pp) | Mean NLL |
+|---|---:|---:|---:|
+| Real-only | 55.99% | 3.70 | 1.2262 |
+| Requested uniform | 62.93% | 3.35 | 1.0311 |
+| Requested SR-GDA | 62.01% | 2.10 | 1.0556 |
+| Pseudo uniform | 59.79% | 3.61 | 1.1159 |
+| Pseudo SR-GDA | 61.96% | 2.77 | 1.0619 |
+
+D_val was used for both price learning and reporting, and the public teacher may have seen it. Requested weights achieve ESS 0.8001. All pseudo-label prices clip to zero, so those weights only correct class priors; their comparison does not isolate scale pricing. These are descriptive screens, with no C_risk, D_test or certificate claim. [Verified evidence](instructions/runs/2026-10-26_trial3_classifiers_v1_140878808.md) · [Full metrics](runs/2026-10-26_trial3_classifiers/verified_artifacts/trial3/RESULT.json) · [Preserved recovery failure](instructions/runs/2026-10-26_trial3_recovery_v1_fit_verified_failure.md).
 
 ## Verified historical quality
 

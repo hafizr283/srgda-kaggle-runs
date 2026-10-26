@@ -1,0 +1,22 @@
+{'trial': 3, 'reused_pool_sha256': '9f1278903c357b96af1707ec3d27fb163c2c3d923cf1c6d88de99ad63dbba9fb', 'pool_count': 5000}
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261026', 'resumed_updates': 100, 'target': 1000}
+/kaggle/working/trials23_source/trial3_teacher_baseline.py:200: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  if successes%50==0:trace.append({'step':successes,'loss':float(loss),'lr':lr,'amp_skips':skips})
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261026', 'updates': 200, 'accuracy': 0.2865999937057495}
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261026', 'updates': 1000, 'accuracy': 0.5669999718666077}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261026', 'updates': 100, 'accuracy': 0.16820000112056732}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261026', 'updates': 200, 'accuracy': 0.3084000051021576}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261026', 'updates': 1000, 'accuracy': 0.5924000144004822}
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261027', 'updates': 100, 'accuracy': 0.2003999948501587}
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261027', 'updates': 200, 'accuracy': 0.25780001282691956}
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261027', 'updates': 1000, 'accuracy': 0.5889999866485596}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261027', 'updates': 100, 'accuracy': 0.22619999945163727}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261027', 'updates': 200, 'accuracy': 0.31220000982284546}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261027', 'updates': 1000, 'accuracy': 0.6478000283241272}
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261028', 'updates': 100, 'accuracy': 0.2231999933719635}
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261028', 'updates': 200, 'accuracy': 0.31779998540878296}
+{'trial': 3, 'arm': 'pseudo_uniform_seed20261028', 'updates': 1000, 'accuracy': 0.6376000046730042}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261028', 'updates': 100, 'accuracy': 0.23420000076293945}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261028', 'updates': 200, 'accuracy': 0.3368000090122223}
+{'trial': 3, 'arm': 'pseudo_srgda_seed20261028', 'updates': 1000, 'accuracy': 0.6186000108718872}

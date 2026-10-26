@@ -1,0 +1,9 @@
+{
+  "beta": 0.0,
+  "ess_fraction_target": 0.8,
+  "ess_fraction_achieved": 0.9997538369750113,
+  "scale": 0.2,
+  "total_mass": 1000.0,
+  "family": "full",
+  "synth_ratio": 0.2
+}

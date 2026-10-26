@@ -1,0 +1,558 @@
+{
+  "version_before": 1,
+  "version_after": 1,
+  "outputs": [
+    {
+      "name": "gpu0_classify.log",
+      "bytes": 3193,
+      "session": null
+    },
+    {
+      "name": "gpu1_classify.log",
+      "bytes": 2292,
+      "session": null
+    },
+    {
+      "name": "trials23_controller.json",
+      "bytes": 529,
+      "session": null
+    },
+    {
+      "name": "trials23_inputs.json",
+      "bytes": 4658,
+      "session": null
+    },
+    {
+      "name": "trial3/classification_progress.json",
+      "bytes": 2654,
+      "session": null
+    },
+    {
+      "name": "trial3/classifier_protocol.json",
+      "bytes": 93693,
+      "session": null
+    },
+    {
+      "name": "trial3/FIT_READY.json",
+      "bytes": 16842,
+      "session": null
+    },
+    {
+      "name": "trial3/identity.json",
+      "bytes": 9798,
+      "session": null
+    },
+    {
+      "name": "trial3/pool_report.json",
+      "bytes": 2881,
+      "session": null
+    },
+    {
+      "name": "trial3/restore_manifest.json",
+      "bytes": 6482,
+      "session": null
+    },
+    {
+      "name": "trial3/RESULT.json",
+      "bytes": 11146,
+      "session": null
+    },
+    {
+      "name": "trial3/teacher35_quality.json",
+      "bytes": 2948,
+      "session": null
+    },
+    {
+      "name": "trial3/teacher_pool.pt",
+      "bytes": 61582928,
+      "session": null
+    },
+    {
+      "name": "trial3/teacher_pool_grid.png",
+      "bytes": 277184,
+      "session": null
+    },
+    {
+      "name": "trial3_worker0/classifier_protocol.json",
+      "bytes": 93693,
+      "session": null
+    },
+    {
+      "name": "trial3_worker0/identity.json",
+      "bytes": 10276,
+      "session": null
+    },
+    {
+      "name": "trial3_worker0/RESULT.json",
+      "bytes": 9460,
+      "session": null
+    },
+    {
+      "name": "trial3_worker1/classifier_protocol.json",
+      "bytes": 93693,
+      "session": null
+    },
+    {
+      "name": "trial3_worker1/identity.json",
+      "bytes": 10251,
+      "session": null
+    },
+    {
+      "name": "trial3_worker1/RESULT.json",
+      "bytes": 8642,
+      "session": null
+    },
+    {
+      "name": "trials23_source/manifest.json",
+      "bytes": 3849,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo/prices.json",
+      "bytes": 31679,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo/profiles.npy",
+      "bytes": 120128,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo/profile_identity.json",
+      "bytes": 615,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo/score_audit.json",
+      "bytes": 21474,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo/weights.npy",
+      "bytes": 40128,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo/weight_audit.json",
+      "bytes": 176,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261026/evaluation100.json",
+      "bytes": 36663,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261026/evaluation1000.json",
+      "bytes": 36708,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261026/evaluation200.json",
+      "bytes": 36685,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261026/trace.json",
+      "bytes": 2158,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261027/evaluation100.json",
+      "bytes": 36703,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261027/evaluation1000.json",
+      "bytes": 36700,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261027/evaluation200.json",
+      "bytes": 36720,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261027/trace.json",
+      "bytes": 2164,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261028/evaluation100.json",
+      "bytes": 36697,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261028/evaluation1000.json",
+      "bytes": 36702,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261028/evaluation200.json",
+      "bytes": 36720,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261028/trace.json",
+      "bytes": 2163,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261026/evaluation100.json",
+      "bytes": 36694,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261026/evaluation1000.json",
+      "bytes": 36705,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261026/evaluation200.json",
+      "bytes": 36716,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261026/resume_audit.json",
+      "bytes": 233,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261026/trace.json",
+      "bytes": 2162,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261027/evaluation100.json",
+      "bytes": 36697,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261027/evaluation1000.json",
+      "bytes": 36709,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261027/evaluation200.json",
+      "bytes": 36712,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261027/trace.json",
+      "bytes": 2161,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261028/evaluation100.json",
+      "bytes": 36693,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261028/evaluation1000.json",
+      "bytes": 36694,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261028/evaluation200.json",
+      "bytes": 36702,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261028/trace.json",
+      "bytes": 2167,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261026/evaluation100.json",
+      "bytes": 36677,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261026/evaluation1000.json",
+      "bytes": 36698,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261026/evaluation200.json",
+      "bytes": 36715,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261026/resume_audit.json",
+      "bytes": 233,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261026/trace.json",
+      "bytes": 2166,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261027/evaluation100.json",
+      "bytes": 36719,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261027/evaluation1000.json",
+      "bytes": 36700,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261027/evaluation200.json",
+      "bytes": 36701,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261027/trace.json",
+      "bytes": 2161,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261028/evaluation100.json",
+      "bytes": 36680,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261028/evaluation1000.json",
+      "bytes": 36710,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261028/evaluation200.json",
+      "bytes": 36712,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261028/trace.json",
+      "bytes": 2168,
+      "session": null
+    },
+    {
+      "name": "trial3/requested/prices.json",
+      "bytes": 31691,
+      "session": null
+    },
+    {
+      "name": "trial3/requested/profiles.npy",
+      "bytes": 120128,
+      "session": null
+    },
+    {
+      "name": "trial3/requested/profile_identity.json",
+      "bytes": 620,
+      "session": null
+    },
+    {
+      "name": "trial3/requested/score_audit.json",
+      "bytes": 21480,
+      "session": null
+    },
+    {
+      "name": "trial3/requested/weights.npy",
+      "bytes": 40128,
+      "session": null
+    },
+    {
+      "name": "trial3/requested/weight_audit.json",
+      "bytes": 219,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261026/evaluation100.json",
+      "bytes": 36690,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261026/evaluation1000.json",
+      "bytes": 36698,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261026/evaluation200.json",
+      "bytes": 36690,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261026/trace.json",
+      "bytes": 2166,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261027/evaluation100.json",
+      "bytes": 36707,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261027/evaluation1000.json",
+      "bytes": 36704,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261027/evaluation200.json",
+      "bytes": 36724,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261027/trace.json",
+      "bytes": 2165,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261028/evaluation100.json",
+      "bytes": 36705,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261028/evaluation1000.json",
+      "bytes": 36703,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261028/evaluation200.json",
+      "bytes": 36711,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261028/trace.json",
+      "bytes": 2166,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261026/evaluation100.json",
+      "bytes": 36663,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261026/evaluation1000.json",
+      "bytes": 36703,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261026/evaluation200.json",
+      "bytes": 36711,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261026/trace.json",
+      "bytes": 2161,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261027/evaluation100.json",
+      "bytes": 36689,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261027/evaluation1000.json",
+      "bytes": 36696,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261027/evaluation200.json",
+      "bytes": 36715,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261027/trace.json",
+      "bytes": 2161,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261028/evaluation100.json",
+      "bytes": 36677,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261028/evaluation1000.json",
+      "bytes": 36705,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261028/evaluation200.json",
+      "bytes": 36708,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261028/trace.json",
+      "bytes": 2156,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261026/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261027/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_srgda_seed20261028/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261026/full_checkpoint.pt",
+      "bytes": 89520675,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261027/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/pseudo_uniform_seed20261028/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261026/full_checkpoint.pt",
+      "bytes": 89520675,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261027/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/real_only_seed20261028/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261026/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261027/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_srgda_seed20261028/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261026/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261027/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    },
+    {
+      "name": "trial3/requested_uniform_seed20261028/full_checkpoint.pt",
+      "bytes": 89520611,
+      "session": null
+    }
+  ],
+  "full_checkpoints_reachable": 15,
+  "session": "unknown"
+}

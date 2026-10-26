@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "embedded_source_files_match_pinned_bundle": 41,
+  "local_source_newline_only_differences": [
+    "trial3_teacher_baseline.py",
+    "trial3_classifier_dual.py"
+  ],
+  "all_workers_match_merged_results": true,
+  "all_logged_raw_lr_values_match_1000_update_cosine_horizon": true,
+  "all_15_final_hashes_distinct": true,
+  "all_summary_values_recomputed": true,
+  "amp_skips_total": 0,
+  "resumed_100_update_evaluation_hashes_match": true,
+  "local_files": 96,
+  "local_bytes": 64361267,
+  "remote_full_checkpoints": 15,
+  "grid_review": "Recognizable, varied class examples; imperfect or ambiguous examples remain. No collapse visible in supplied grid.",
+  "local_inference": false
+}

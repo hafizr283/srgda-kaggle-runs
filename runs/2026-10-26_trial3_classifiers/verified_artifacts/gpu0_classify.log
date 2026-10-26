@@ -1,0 +1,31 @@
+{'trial': 3, 'reused_pool_sha256': '9f1278903c357b96af1707ec3d27fb163c2c3d923cf1c6d88de99ad63dbba9fb', 'pool_count': 5000}
+{'trial': 3, 'arm': 'real_only_seed20261026', 'resumed_updates': 100, 'target': 1000}
+/kaggle/working/trials23_source/trial3_teacher_baseline.py:200: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  if successes%50==0:trace.append({'step':successes,'loss':float(loss),'lr':lr,'amp_skips':skips})
+{'trial': 3, 'arm': 'real_only_seed20261026', 'updates': 200, 'accuracy': 0.2815999984741211}
+{'trial': 3, 'arm': 'real_only_seed20261026', 'updates': 1000, 'accuracy': 0.5192000269889832}
+{'trial': 3, 'arm': 'requested_uniform_seed20261026', 'updates': 100, 'accuracy': 0.18039999902248383}
+{'trial': 3, 'arm': 'requested_uniform_seed20261026', 'updates': 200, 'accuracy': 0.2750000059604645}
+{'trial': 3, 'arm': 'requested_uniform_seed20261026', 'updates': 1000, 'accuracy': 0.6244000196456909}
+{'trial': 3, 'arm': 'requested_srgda_seed20261026', 'updates': 100, 'accuracy': 0.2117999941110611}
+{'trial': 3, 'arm': 'requested_srgda_seed20261026', 'updates': 200, 'accuracy': 0.2793999910354614}
+{'trial': 3, 'arm': 'requested_srgda_seed20261026', 'updates': 1000, 'accuracy': 0.6182000041007996}
+{'trial': 3, 'arm': 'real_only_seed20261027', 'updates': 100, 'accuracy': 0.22139999270439148}
+{'trial': 3, 'arm': 'real_only_seed20261027', 'updates': 200, 'accuracy': 0.274399995803833}
+{'trial': 3, 'arm': 'real_only_seed20261027', 'updates': 1000, 'accuracy': 0.5916000008583069}
+{'trial': 3, 'arm': 'requested_uniform_seed20261027', 'updates': 100, 'accuracy': 0.22200000286102295}
+{'trial': 3, 'arm': 'requested_uniform_seed20261027', 'updates': 200, 'accuracy': 0.335999995470047}
+{'trial': 3, 'arm': 'requested_uniform_seed20261027', 'updates': 1000, 'accuracy': 0.6650000214576721}
+{'trial': 3, 'arm': 'requested_srgda_seed20261027', 'updates': 100, 'accuracy': 0.2337999939918518}
+{'trial': 3, 'arm': 'requested_srgda_seed20261027', 'updates': 200, 'accuracy': 0.3190000057220459}
+{'trial': 3, 'arm': 'requested_srgda_seed20261027', 'updates': 1000, 'accuracy': 0.6420000195503235}
+{'trial': 3, 'arm': 'real_only_seed20261028', 'updates': 100, 'accuracy': 0.2321999967098236}
+{'trial': 3, 'arm': 'real_only_seed20261028', 'updates': 200, 'accuracy': 0.2842000126838684}
+{'trial': 3, 'arm': 'real_only_seed20261028', 'updates': 1000, 'accuracy': 0.5687999725341797}
+{'trial': 3, 'arm': 'requested_uniform_seed20261028', 'updates': 100, 'accuracy': 0.21559999883174896}
+{'trial': 3, 'arm': 'requested_uniform_seed20261028', 'updates': 200, 'accuracy': 0.27059999108314514}
+{'trial': 3, 'arm': 'requested_uniform_seed20261028', 'updates': 1000, 'accuracy': 0.5985999703407288}
+{'trial': 3, 'arm': 'requested_srgda_seed20261028', 'updates': 100, 'accuracy': 0.22840000689029694}
+{'trial': 3, 'arm': 'requested_srgda_seed20261028', 'updates': 200, 'accuracy': 0.2637999951839447}
+{'trial': 3, 'arm': 'requested_srgda_seed20261028', 'updates': 1000, 'accuracy': 0.6001999974250793}

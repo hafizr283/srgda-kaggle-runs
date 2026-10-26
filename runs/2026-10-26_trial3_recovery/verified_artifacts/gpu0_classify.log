@@ -1,0 +1,15 @@
+{'trial': 3, 'reused_pool_sha256': '9f1278903c357b96af1707ec3d27fb163c2c3d923cf1c6d88de99ad63dbba9fb', 'pool_count': 5000}
+/kaggle/working/trials23_source/trial3_teacher_baseline.py:179: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  if successes%50==0:trace.append({'step':successes,'loss':float(loss),'lr':lr,'amp_skips':skips})
+Traceback (most recent call last):
+  File "/kaggle/working/trials23_source/trial3_teacher_baseline.py", line 346, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/kaggle/working/trials23_source/trial3_teacher_baseline.py", line 331, in main
+    train(real,real_y,xs,ys,weights,seed,1000,'resnet18',dest)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/working/trials23_source/trial3_teacher_baseline.py", line 190, in train
+    counts=agreement(predictions,val_y)
+           ^^^^^^^^^
+NameError: name 'agreement' is not defined

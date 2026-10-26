@@ -1,0 +1,29 @@
+{'trial': 3, 'reused_pool_sha256': '9f1278903c357b96af1707ec3d27fb163c2c3d923cf1c6d88de99ad63dbba9fb', 'pool_count': 5000}
+{'trial': 3, 'reused_score': 'requested', 'updates': 200, 'sha256': '20f791b5745595b759d7f11c82d1addb3d1972ba68f38e37d07fd57f00d9a764'}
+/kaggle/working/trials23_source/trial3_teacher_baseline.py:179: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  if successes%50==0:trace.append({'step':successes,'loss':float(loss),'lr':lr,'amp_skips':skips})
+{'trial': 3, 'labels': 'requested', 'price_group': 1, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 2, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 3, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 4, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 5, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 6, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 7, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 8, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 9, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 10, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 11, 'total': 12}
+{'trial': 3, 'labels': 'requested', 'price_group': 12, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 1, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 2, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 3, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 4, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 5, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 6, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 7, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 8, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 9, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 10, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 11, 'total': 12}
+{'trial': 3, 'labels': 'pseudo', 'price_group': 12, 'total': 12}

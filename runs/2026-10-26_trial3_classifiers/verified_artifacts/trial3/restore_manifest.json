@@ -1,0 +1,122 @@
+{
+  "files": [
+    {
+      "name": "teacher_pool.pt",
+      "sha256": "9f1278903c357b96af1707ec3d27fb163c2c3d923cf1c6d88de99ad63dbba9fb"
+    },
+    {
+      "name": "pool_report.json",
+      "sha256": "6d43b1b9fb840e50362612e1cd69c6f7cc59c6a691864c38a72ca9eec983b867"
+    },
+    {
+      "name": "teacher35_quality.json",
+      "sha256": "aa2d592dfbbb6de35e82297fa35404b3ad23be766625d54fa5bd6ff9f7faf8c3"
+    },
+    {
+      "name": "identity.json",
+      "sha256": "ea4666f4b47c50242a9d8b0132ef358c4755b54063bdd44da35cfb7523015f50"
+    },
+    {
+      "name": "classifier_protocol.json",
+      "sha256": "79eb9f12f2b114f41ad2644028ff3e37f7b25559a1d0d7b3e8978a63ddf5ee03"
+    },
+    {
+      "name": "requested/profiles.npy",
+      "sha256": "9753cdb8aa2a0287f2966407ed2fedb13164a67ac1068f362f06bdc96bde71c5"
+    },
+    {
+      "name": "requested/profile_identity.json",
+      "sha256": "234aa013e9185164c6b3db85e045f2b0afd5d30c70c90766a1365e0c49ec31e1"
+    },
+    {
+      "name": "requested/prices.json",
+      "sha256": "6bd411de0e54b25ae6162a19c90e0afdca087cf25218e6e0c169ac62fe199da9"
+    },
+    {
+      "name": "requested/weights.npy",
+      "sha256": "683737657eb5d2b90ce77a4195ac8e75032bef24989ea338dbc37fa89c1bbcfc"
+    },
+    {
+      "name": "requested/weight_audit.json",
+      "sha256": "762e6285d3239e40b7a24abc7d2fea716865fc504f9dfd0a635b8bbc1dfa9e66"
+    },
+    {
+      "name": "requested/score_audit.json",
+      "sha256": "a089f12ba0cdd6fdf4078e1308e4de786f474166a5cb905c0efe57ded15eaa20"
+    },
+    {
+      "name": "pseudo/profiles.npy",
+      "sha256": "b877624e9c61a20d3c6a7bd195a6efe4129c45b47846de4d0ae226ddfc3e4990"
+    },
+    {
+      "name": "pseudo/profile_identity.json",
+      "sha256": "1cfc02ae8ca55a57fefe36750207b74c9e4e9691753ab4b1d896ea688ec85d05"
+    },
+    {
+      "name": "pseudo/prices.json",
+      "sha256": "f48d249c88228c0bc55d0999cf9f992f1c8764bfcb8dff6871f5c1adf42822f7"
+    },
+    {
+      "name": "pseudo/weights.npy",
+      "sha256": "9034b50672f138117a0e6d93228fc2b9197cfabf76a23de92996706473f32a27"
+    },
+    {
+      "name": "pseudo/weight_audit.json",
+      "sha256": "2f1e8ce7bf196e2a45892ffbba9a5ed2383d1f282975d2b5588755c946537151"
+    },
+    {
+      "name": "pseudo/score_audit.json",
+      "sha256": "0e7a233c298d100abcafe87a727b9834fb48a493c213066d4a06412352932701"
+    },
+    {
+      "name": "real_only_seed20261026/full_checkpoint.pt",
+      "sha256": "693c4087bb137490eb190dffeededb667d95825c3e1bfa908704a851e86a23d7"
+    },
+    {
+      "name": "pseudo_uniform_seed20261026/full_checkpoint.pt",
+      "sha256": "e4a796902bf9c8950127458b84debc640a3ba66d846d208af1639c183535ddc0"
+    }
+  ],
+  "source_manifest": {
+    "srgda/mwn.py": "e8662b222bc7ee2586b092558a7ac1cc33d4441784bddc57fd41e7880947973c",
+    "srgda/classifier.py": "1284d2ca0b7c0c00d34b155f83209be269d6468751cf08f55be73839a800768f",
+    "srgda/conditional_teacher.py": "55d7de7497310894a30141f04ba2eece71ddcefa653a5b6a4a31b03e3450fda4",
+    "srgda/__init__.py": "6a6b372c3125fcdb3b809aa6eaeeb751727f4d981c4f0d3878c3ac075bc3e838",
+    "srgda/guidance_units.py": "393e7483da9e9354ce3e5e3c7c611f51e87ae90d6fb3b5cdedfc9d8b612bff7b",
+    "srgda/prepared_assets.py": "b336570c64a210a16c243c04c2d310b6c0c43bed9843a4d3c65dcbbec79ea664",
+    "srgda/profiling.py": "7e1e5bc02160ff36ba7313ae5e6f6b42d1a5997c430f228d3da2ab8b6ffa269d",
+    "srgda/gpu.py": "9fef12f8da9d25d01703a5ed3c17afe66e922e0478b339cb7ee4892fbd860488",
+    "srgda/data.py": "874ca420747eb83aac10042a94d65eca2f8884094eaf7f099041336e4fe777cc",
+    "srgda/weights.py": "587b553515795f7dc3e874374d733e453adb6e8dce2ee01442be9f435ea2d4e6",
+    "srgda/quality.py": "f47ee691bde723c87779f6fe5f9d259bc95b2a1125433f6377249c4f448a3155",
+    "srgda/budget.py": "6ea79f4e5cec14501ac8e924a143090c11186de533060717f66a5907cea65952",
+    "srgda/toy2d.py": "3a4db6fca29430fd7bf7890f179ac460a697b83ef751c1fc4e16346a6ffe7ff4",
+    "srgda/generator.py": "551b8bd27d006c6d30f620daf549b6befba9634aa03dad0d24cf5fc027f360cd",
+    "srgda/conditioning.py": "e078bbc90fcd59d95b1ea694b21a1a3f7c6aea9995b8275aa08872e2f5147d5c",
+    "srgda/certificate.py": "06085b4584457159b04159fbf33eb9b54c962241a151c616c3146c6b4663c50f",
+    "srgda/validation_screen.py": "76c7355d102e5c567378477564d521a1b0fa87c9cee65ff2d12a2c92978b436f",
+    "srgda/devices.py": "3325fdeb07cde605c2c2a6b98fd15c010a8331e2a0b26d1460e21fc8c6a89bf6",
+    "srgda/evidence.py": "95d994b6ab75c4633924d2f279a46cb176d089af299c48437a16197846ab1fb3",
+    "srgda/conditioning_arms.py": "ddcdee743aba8a915aa6e8bc481e967c0e8b42ef0fedd2e17fe5cceb588c7bbd",
+    "srgda/run_pipeline.py": "bdd4fdcb48a07ea5260563250d09ddd64c5737019cf358eb77fa98344131e475",
+    "srgda/config.py": "5c2dcae3a802e4f2b6881dcce54394597f1a54ef5b605bd49f985a3051048a4d",
+    "srgda/trace_json.py": "ba74d32865c9cd575bb436cc5b22a104ec27d4f9203143d69853e9a16072ee27",
+    "srgda/native_edm.py": "7c6fa3cacf26c9354dbd4f9da3fa72291c299aa1b53f49d5ff4bd610e09712b8",
+    "srgda/labeling.py": "407c887663388b47fdd3c988810a6707efee38ace7f69c85a8ffc60a5d299d3d",
+    "srgda/pricing.py": "fe8b3a5ab47505d60ef56a1c400ed5254f6c4e3da2e6f3d70226f5682e775601",
+    "srgda/diagnostics.py": "ff06f94689fbda2ae50f838f165e7666bcd0e3e2394e1ec885042a299a0be5a8",
+    "native_edm_plan1.py": "08b40f74d466da64cca643b1f9bbc89a7269aaa0435abcfb569399173fe1f33e",
+    "native_edm_plan1_dual.py": "fe35fe0d0560e450c00d657ac2440d9716c53be9dfd17041a542ef1fe994494e",
+    "conditional_compare.py": "6672e138f8e55e47b602b283e0a60ac2b33d93c612e8a13e4740fc4733ad114d",
+    "conditioning_diagnostics.py": "76534ba5353d51dcd9f3ee3c581454654ad0941c541dfa8094012c89bba2896e",
+    "conditioning_arms_stage1.py": "ac5d38ce61133333d78012876f83d1804eace5ffa06b706ede60fc233e473b57",
+    "srgda/progressive_ve.py": "e6ad40140683e43804cc405f98466a511b4ed6e8596c9053ebfff527ca4d90d8",
+    "trials23_common.py": "6dc315e2c08c8bf538a262e9aea52c05e0969b83ac506bad0b8d07b5fcc7fc1b",
+    "trial2_progressive.py": "bcd1427f1b4163d06be90f19566e1b3bc06ac48c3506f7db4c5d69e0d5ab4486",
+    "trial3_teacher_baseline.py": "b082f2dceefc878c1f6920691658f2ae5e68a91e52e2c4077bbddf495cd11eae",
+    "trials23_dual.py": "82ab8bdb842e497823d3c67d2cb0a661b0fa6316e676a1606dc46584c308bf7e",
+    "srgda/profile_noise.py": "2fac27d0e111a9af9f1717afa43eed4d681ea4032379d88d9eebb4328aa94973",
+    "trial3_recovery_dual.py": "230e05f5df7df25c5219b8bb2fb7cbd92241aaa0dbe1262abcfedaee5914d7c5"
+  },
+  "pool_sha256": "9f1278903c357b96af1707ec3d27fb163c2c3d923cf1c6d88de99ad63dbba9fb"
+}

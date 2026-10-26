@@ -1,0 +1,20 @@
+{
+  "backend": "native conditional VE score L2 mismatch",
+  "formula": "norm((D_teacher-D_fake)/sigma^2)",
+  "sigmas": [
+    0.1,
+    0.5,
+    2.0
+  ],
+  "draws": 2,
+  "noise": "CPU generator per absolute image/level/draw; batching invariant",
+  "seed_rule": "mixed-radix expression modulo 2^64; overflow repair v1",
+  "label_strategy": "requested",
+  "column_std": [
+    1.7908208335371902,
+    0.27440707107240186,
+    0.03984017249732604
+  ],
+  "pool_sha256": "9f1278903c357b96af1707ec3d27fb163c2c3d923cf1c6d88de99ad63dbba9fb",
+  "profiles_sha256": "9753cdb8aa2a0287f2966407ed2fedb13164a67ac1068f362f06bdc96bde71c5"
+}
