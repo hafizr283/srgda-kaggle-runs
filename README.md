@@ -6,13 +6,20 @@ Updated 26 October 2026, Asia/Dhaka. The site preserves notebook versions, quali
 
 ## Best results and latest verification
 
-Reviewed 2026-10-26 20:44:51 Asia/Dhaka. **Best completed matched downstream baseline: Trial 3 requested uniform, 62.93% mean D_val accuracy across three seeds**, versus 55.99% real-only. No learned scale-pricing gain established.
+Reviewed 2026-10-26 22:35:02 Asia/Dhaka. **Best completed matched downstream comparison: requested uniform at 5,000 steps, 81.71% mean full-D_val accuracy**, versus **81.11% for frozen fit4_plus**. Uniform leads by 0.60 percentage points and has lower mean NLL (0.7438 versus 0.7827). Both arms completed all 5,000 updates across three matched seeds, with zero AMP skips. Two T4s ran concurrently; controller wall 18.39 minutes.
 
-**Strongest exploratory vNext candidate: fit4_plus, 64.98% versus 62.38% matched uniform on V_price only** (+2.60 pp). This was found after examining 13 policies and is not a promoted method or a full-D_val/held-out result. Highest single V_price observation is 67.30% for fit1_minus; a best seed is not a reliable method ranking.
+| Classifier at 5,000 steps | Seed 20261026 | Seed 20261027 | Seed 20261028 | Mean accuracy | Mean NLL |
+|---|---:|---:|---:|---:|---:|
+| Requested uniform | 82.72% | 82.60% | 79.80% | **81.71%** | **0.7438** |
+| fit4_plus | 82.06% | 80.44% | 80.82% | 81.11% | 0.7827 |
+
+Same 5,000 D_val images for both arms. Historically exposed validation data; D_test and C_risk untouched. [Verified completion](instructions/runs/2026-10-26_uniform_fit4_full5000_verified_141013032.md) · [Independent audit](runs/2026-10-26_uniform_fit4_full5000/verified.json) · [Exact Kaggle version](https://www.kaggle.com/code/hafizr283/srgda-uniform-vs-fit4-full5000-two-t4-20261026/versions/1) (private; owner login required).
+
+The earlier **fit4_plus 64.98% versus uniform 62.38%** was exploratory on the **2,000-image pricing split**, at 1,000 steps and different seeds. It did not predict a mean advantage in this 5,000-step comparison. The original Trial 3 five-arm comparison at 1,000 steps remains below as historical evidence.
 
 **Best accepted compact-generator screen: Trial 2 eight-step student**, 93.45% independent class obedience / FID 28.53 at 2k fake / 5k real. **Best historical student FID: cap30 at 5k, 42.31**, under 8k/4k; these FIDs cannot be directly compared. Teacher and 45k-real evaluator references are separate.
 
-Latest: pricing fit 39/39 classifiers complete but 3 of 4 gates fail; inference changes yield no qualifying winner and V_report stays closed; Astra 480 updates / 96 branches verified but all scientific gates fail, so no adaptive-controller / 5k promotion. Original failures and zero-update diagnostic remain linked.
+Earlier studies (original decisions preserved): pricing fit 39/39 classifiers complete but 3 of 4 gates fail; inference changes yield no qualifying winner and kept V_report closed within that study; Astra 480 updates / 96 branches verified but all scientific gates fail, so no adaptive-controller / 5k promotion. Original failures and zero-update diagnostic remain linked.
 
 [Best-results data and source hashes](best_run_review.json) · [Pricing audit](runs/2026-10-26_website_best_review/public/fit_audit.json) · [Astra audit](runs/2026-10-26_website_best_review/public/astra_audit.json).
 

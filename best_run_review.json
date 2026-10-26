@@ -1,51 +1,57 @@
 {
   "schema": "srgda-best-run-review-v1",
-  "updated_dhaka": "2026-10-26 20:44:51 Asia/Dhaka",
+  "updated_dhaka": "2026-10-26 22:35:02 Asia/Dhaka",
   "coverage": {
-    "notebooks": 31,
-    "versions": 38,
+    "notebooks": 32,
+    "versions": 39,
     "public": 14,
-    "private": 17,
+    "private": 18,
     "verified_completed_augmentation_arms": 5,
     "verified_fit_trajectories": 39,
     "historical_student_fid_points": 7,
-    "closed_split_evaluation_performed": false
+    "closed_split_evaluation_performed": true,
+    "verified_full5000_trajectories": 6,
+    "closed_split_note": "V_report opened for this explicitly authorized final full-D_val comparison; D_test/C_risk remain closed."
   },
   "interpretation": "These are descriptive, protocol-specific results. D_val has historical and teacher exposure. No significance, final-test or certificate claim. New 2k/5k FID is not directly comparable with historical 8k/4k FID.",
   "findings": [
     {
-      "scope": "MATCHED DOWNSTREAM BASELINE",
-      "name": "Trial 3 · requested uniform",
-      "value": "62.93%",
+      "scope": "BEST COMPLETED MATCHED DOWNSTREAM COMPARISON",
+      "name": "5,000-step requested uniform",
+      "value": "81.71%",
       "metric": "Mean accuracy · all 5,000 D_val images · three seeds",
-      "summary": "Strongest mean accuracy and lowest mean NLL among the five matched 1,000-update classifier arms. Gain over real-only: 6.95 pp.",
-      "limitation": "Best baseline in that completed comparison; it does not establish a scale-pricing benefit or an untouched-holdout result.",
+      "summary": "Leads frozen fit4_plus (81.11%) by 0.60 pp, with lower mean NLL (0.7438 versus 0.7827). Both arms completed 5,000 successful updates per seed.",
+      "limitation": "Descriptive validation result on one cached teacher pool. D_val has historical exposure; no final-test or certificate claim.",
       "evidence_links": [
         {
-          "label": "All five arms and seeds",
-          "url": "#downstream"
+          "label": "5,000-step comparison",
+          "url": "#full5000-comparison"
         },
         {
-          "label": "Verified comparison",
-          "url": "instructions/runs/2026-10-26_trial3_classifiers_v1_140878808.md"
+          "label": "Verified experiment record",
+          "url": "instructions/runs/2026-10-26_uniform_fit4_full5000_verified_141013032.md"
+        },
+        {
+          "label": "Independent prediction audit",
+          "url": "runs/2026-10-26_uniform_fit4_full5000/verified.json"
         }
       ]
     },
     {
-      "scope": "EXPLORATORY CANDIDATE · NOT PROMOTED",
-      "name": "vNext · fit4_plus",
-      "value": "64.98%",
-      "metric": "Mean accuracy · 2,000-image V_price only · three seeds",
-      "summary": "Highest observed mean among the 13 fit policies, versus 62.38% for matched uniform (+2.60 pp). All three paired accuracy and NLL changes favor this fixed intervention.",
-      "limitation": "Identified after examining fit outcomes. No reserved audit or fresh-seed confirmation; registered pricing gates failed. A promising candidate, not a validated winner.",
+      "scope": "EXPLORATORY WEIGHTING · 5,000-STEP FOLLOW-UP",
+      "name": "Frozen fit4_plus",
+      "value": "81.11%",
+      "metric": "Mean accuracy · same 5,000 D_val images · three matched seeds",
+      "summary": "The former V_price candidate did not outperform uniform at 5,000 steps: −0.60 pp in mean accuracy and higher mean NLL. One of three paired seeds improved.",
+      "limitation": "Earlier 64.98% versus 62.38% used the 2,000-image pricing split and different seeds. It is retained below as exploratory history, not a comparable full-D_val result.",
       "evidence_links": [
         {
-          "label": "All 13 policies",
-          "url": "#pricing-vnext"
+          "label": "All seeds and metrics",
+          "url": "#full5000-comparison"
         },
         {
-          "label": "Fit gates",
-          "url": "runs/2026-10-26_website_best_review/public/fit_analysis.json"
+          "label": "Original 1,000-step fit",
+          "url": "#pricing-vnext"
         }
       ]
     },
@@ -114,10 +120,95 @@
   ],
   "studies": [
     {
+      "id": "full5000-comparison",
+      "title": "Uniform versus fit4_plus · 5,000 steps verified",
+      "verification_status": "COMPLETE",
+      "scientific_status": "Verified complete · uniform leads",
+      "decision": "Uniform averages 81.71% versus 81.11% for fit4_plus (−0.60 pp for weighting). Uniform also has lower mean NLL. Retain uniform as the stronger control in this comparison; no demonstrated fit4_plus benefit.",
+      "protocol": "Fresh starts; three paired seeds 20261026/27/28; fixed 5,000-step cosine schedule. Same frozen 5k teacher pool, requested labels, balanced 5k real subset and ResNet18 recipe. One arm per T4, run concurrently. All six trajectories reached 5,000 successful updates with zero AMP skips; all training/evaluation exits 0. Controller wall 18.39 minutes. Final evaluation on all 5,000 D_val images; historically exposed D_val, V_report now opened. D_test/C_risk untouched.",
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-uniform-vs-fit4-full5000-two-t4-20261026/versions/1",
+      "tables": [
+        {
+          "caption": "Full D_val accuracy, NLL and every matched seed at 5,000 updates",
+          "columns": [
+            {
+              "key": "name",
+              "label": "Approach",
+              "format": "text"
+            },
+            {
+              "key": "accuracy",
+              "label": "Mean accuracy",
+              "format": "percent"
+            },
+            {
+              "key": "delta",
+              "label": "Versus uniform",
+              "format": "delta_pp"
+            },
+            {
+              "key": "nll",
+              "label": "Mean NLL ↓",
+              "format": "nll"
+            },
+            {
+              "key": "seed1",
+              "label": "Seed 20261026",
+              "format": "percent"
+            },
+            {
+              "key": "seed2",
+              "label": "Seed 20261027",
+              "format": "percent"
+            },
+            {
+              "key": "seed3",
+              "label": "Seed 20261028",
+              "format": "percent"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Requested uniform",
+              "accuracy": 0.8170666666666667,
+              "delta": 0.0,
+              "nll": 0.7437784977116172,
+              "seed1": 0.8272,
+              "seed2": 0.826,
+              "seed3": 0.798
+            },
+            {
+              "name": "fit4_plus",
+              "accuracy": 0.8110666666666667,
+              "delta": -0.006000000000000005,
+              "nll": 0.7827247240568943,
+              "seed1": 0.8206,
+              "seed2": 0.8044,
+              "seed3": 0.8082
+            }
+          ]
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "Verified experiment record",
+          "url": "instructions/runs/2026-10-26_uniform_fit4_full5000_verified_141013032.md"
+        },
+        {
+          "label": "Independent prediction audit",
+          "url": "runs/2026-10-26_uniform_fit4_full5000/verified.json"
+        },
+        {
+          "label": "All training results",
+          "url": "runs/2026-10-26_uniform_fit4_full5000/RESULT.json"
+        }
+      ]
+    },
+    {
       "id": "pricing-vnext",
       "title": "Pricing vNext · fit verified complete",
       "scientific_status": "Scientific gates failed",
-      "decision": "All 39 classifier trajectories reached 1,000 updates. Prediction, signal resolution and linearity failed; stability passed. The study stopped before reserved audit, selection and the fresh-seed screen.",
+      "decision": "All 39 classifier trajectories reached 1,000 updates. Prediction, signal resolution and linearity failed; stability passed. The study stopped before reserved audit, selection and the fresh-seed screen. Subsequent user-directed 5,000-step comparison is reported separately above; fit4_plus did not beat uniform there.",
       "protocol": "Three matched seeds; V_price has 2,000 historically exposed D_val examples. Frozen source/inputs/checkpoints, zero AMP skips. Fit wall 32.73 minutes. Exploratory accuracy rankings below do not replace the registered gates.",
       "url": "https://www.kaggle.com/code/hafizr283/srgda-vnext-fit-20261026/versions/1",
       "tables": [
@@ -366,7 +457,7 @@
       "title": "Inference changes · verified complete",
       "scientific_status": "No qualifying winner",
       "decision": "Flip averaging gained 0.84 pp, below the frozen 1 pp threshold. Real-only BN recalibration lost 0.11 pp; the combination gained 0.53 pp. Baseline retained and V_report stayed closed.",
-      "protocol": "Same three completed uniform checkpoints; V_select only (1,500 images). Exact original V_price probability replay passed. No optimizer updates; script wall 58.04s. This table is not directly comparable with full-D_val or V_price accuracy.",
+      "protocol": "Same three completed uniform checkpoints; V_select only (1,500 images). Exact original V_price probability replay passed. No optimizer updates; script wall 58.04s. This table is not directly comparable with full-D_val or V_price accuracy. V_report remained closed in this inference study; it was subsequently opened by the separate full-D_val 5,000-step comparison.",
       "url": "https://www.kaggle.com/code/hafizr283/srgda-accuracy-inference-improvement-20261026/versions/1",
       "tables": [
         {
@@ -534,6 +625,10 @@
     "limitation": "Single highest V_price observation, not a method selection or comparable full-D_val winner."
   },
   "source_evidence": [
+    {
+      "path": "runs/2026-10-26_uniform_fit4_full5000/verified.json",
+      "sha256": "5a8a2614d3b19226bc1107615ac6c022ced3402965e9345d19b2e16f0868857f"
+    },
     {
       "path": "experiments/2026-10-26_pricing_vnext/evidence/fit_verified/fit_report.json",
       "sha256": "644be4ea2d253564bd07d04c1b331f654f8f2cddf68e8fd8c3ff1faa004a7ff5"

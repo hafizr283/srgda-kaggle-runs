@@ -1,6 +1,60 @@
 {
-  "updated_dhaka": "2026-10-26 08:05:53 Asia/Dhaka",
+  "updated_dhaka": "2026-10-26 22:35:02 Asia/Dhaka",
   "experiments": [
+    {
+      "title": "5,000-step requested uniform versus frozen fit4_plus",
+      "status": "COMPLETE",
+      "verified": true,
+      "result_kind": "downstream",
+      "classifier_seeds": [
+        20261026,
+        20261027,
+        20261028
+      ],
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-uniform-vs-fit4-full5000-two-t4-20261026/versions/1",
+      "decision": "Uniform averages 81.71% versus 81.11% for fit4_plus (−0.60 pp for weighting). Uniform also has lower mean NLL. Retain uniform as the stronger control in this comparison; no demonstrated fit4_plus benefit.",
+      "protocol": "Fresh starts; three paired seeds 20261026/27/28; fixed 5,000-step cosine schedule. Same frozen 5k teacher pool, requested labels, balanced 5k real subset and ResNet18 recipe. One arm per T4, run concurrently. All six trajectories reached 5,000 successful updates with zero AMP skips; all training/evaluation exits 0. Controller wall 18.39 minutes. Final evaluation on all 5,000 D_val images; historically exposed D_val, V_report now opened. D_test/C_risk untouched.",
+      "arms": [
+        {
+          "name": "Requested uniform",
+          "downstream_accuracy": 0.8170666666666667,
+          "seed_std_pp": 1.6523115121953627,
+          "mean_nll": 0.7437784977116172,
+          "successful_updates": 5000,
+          "seed_accuracies": [
+            0.8272,
+            0.826,
+            0.798
+          ]
+        },
+        {
+          "name": "fit4_plus",
+          "downstream_accuracy": 0.8110666666666667,
+          "seed_std_pp": 0.8471914384206982,
+          "mean_nll": 0.7827247240568943,
+          "successful_updates": 5000,
+          "seed_accuracies": [
+            0.8206,
+            0.8044,
+            0.8082
+          ]
+        }
+      ],
+      "evidence_links": [
+        {
+          "label": "Verified experiment record",
+          "url": "instructions/runs/2026-10-26_uniform_fit4_full5000_verified_141013032.md"
+        },
+        {
+          "label": "Independent prediction audit",
+          "url": "runs/2026-10-26_uniform_fit4_full5000/verified.json"
+        },
+        {
+          "label": "All training results",
+          "url": "runs/2026-10-26_uniform_fit4_full5000/RESULT.json"
+        }
+      ]
+    },
     {
       "title": "Trial 2 progressive step reduction",
       "status": "COMPLETE",
@@ -20,7 +74,7 @@
           "grid": "runs/2026-10-26_trials23/verified_artifacts/trial2/teacher16_grid.png"
         },
         {
-          "name": "8-step student \u00b7 accepted at 1,000 updates",
+          "name": "8-step student · accepted at 1,000 updates",
           "independent_accuracy": 0.934499979019165,
           "fid": 28.53391811694496,
           "kid": 0.013799098042053487,
@@ -30,7 +84,7 @@
           "grid": "runs/2026-10-26_trials23/verified_artifacts/trial2/stage8/gate1000_grid.png"
         },
         {
-          "name": "4-step student \u00b7 rejected at 500 updates",
+          "name": "4-step student · rejected at 500 updates",
           "independent_accuracy": 0.8955000042915344,
           "fid": 40.146403339156905,
           "kid": 0.027455332885887307,
@@ -180,7 +234,7 @@
       ]
     },
     {
-      "title": "Two T4s \u00b7 conditional DMD vs teacher pairs",
+      "title": "Two T4s · conditional DMD vs teacher pairs",
       "status": "COMPLETE",
       "verified": true,
       "url": "https://www.kaggle.com/code/hafizr283/srgda-category-comparison-two-t4-20261025/versions/1",
@@ -188,7 +242,7 @@
       "protocol": "200 iterations per T4; 191 / 200 successful G updates; 500 independent label probes. Quality: 2k fresh fake / 5k D_val; Inception pool3; separate 2.5k / 2.5k real-real FID 20.08 (diagnostic, not a floor). Single seed; not directly comparable with historical 8k / 4k FID.",
       "arms": [
         {
-          "name": "GPU 0 \u00b7 conditional teacher + fake DMD",
+          "name": "GPU 0 · conditional teacher + fake DMD",
           "independent_accuracy": 0.09799999743700027,
           "label_latent_ratio": 0.011719075962901115,
           "sample_std": 0.4660376012325287,
@@ -199,7 +253,7 @@
           "recall": 0.0038
         },
         {
-          "name": "GPU 1 \u00b7 direct teacher-pair regression",
+          "name": "GPU 1 · direct teacher-pair regression",
           "independent_accuracy": 0.11800000071525574,
           "label_latent_ratio": 0.029392508789896965,
           "sample_std": 0.3458631634712219,
@@ -212,7 +266,7 @@
       ]
     },
     {
-      "title": "Stage 1 \u00b7 control and two guidance treatments",
+      "title": "Stage 1 · control and two guidance treatments",
       "status": "COMPLETE",
       "verified": true,
       "url": "https://www.kaggle.com/code/hafizr283/srgda-conditioning-arms-stage-1-20261024/versions/1",

@@ -1,0 +1,216 @@
+{
+  "verified": true,
+  "notebook_id": 141013032,
+  "version": 1,
+  "rows": [
+    {
+      "policy": "uniform",
+      "seed": 20261026,
+      "steps": 5000,
+      "accuracy": 0.8272,
+      "nll": 0.7136412932052277,
+      "worst_class_accuracy": 0.6924686192468619,
+      "splits": {
+        "price": {
+          "n": 2000,
+          "accuracy": 0.83,
+          "nll": 0.7055571477172654
+        },
+        "select": {
+          "n": 1500,
+          "accuracy": 0.8266666666666667,
+          "nll": 0.7253679165043607
+        },
+        "report": {
+          "n": 1500,
+          "accuracy": 0.824,
+          "nll": 0.7126935305567116
+        }
+      },
+      "training_seconds": 344.98833337400043
+    },
+    {
+      "policy": "uniform",
+      "seed": 20261027,
+      "steps": 5000,
+      "accuracy": 0.826,
+      "nll": 0.6984086704464942,
+      "worst_class_accuracy": 0.702928870292887,
+      "splits": {
+        "price": {
+          "n": 2000,
+          "accuracy": 0.833,
+          "nll": 0.6722778706589111
+        },
+        "select": {
+          "n": 1500,
+          "accuracy": 0.8233333333333334,
+          "nll": 0.7378888347924643
+        },
+        "report": {
+          "n": 1500,
+          "accuracy": 0.8193333333333334,
+          "nll": 0.6937695724839682
+        }
+      },
+      "training_seconds": 344.62135068300154
+    },
+    {
+      "policy": "uniform",
+      "seed": 20261028,
+      "steps": 5000,
+      "accuracy": 0.798,
+      "nll": 0.8192855294831295,
+      "worst_class_accuracy": 0.6422594142259415,
+      "splits": {
+        "price": {
+          "n": 2000,
+          "accuracy": 0.811,
+          "nll": 0.7676969840052286
+        },
+        "select": {
+          "n": 1500,
+          "accuracy": 0.7926666666666666,
+          "nll": 0.8391575465186961
+        },
+        "report": {
+          "n": 1500,
+          "accuracy": 0.786,
+          "nll": 0.8681982397514315
+        }
+      },
+      "training_seconds": 344.69287092000627
+    },
+    {
+      "policy": "fit4_plus",
+      "seed": 20261026,
+      "steps": 5000,
+      "accuracy": 0.8206,
+      "nll": 0.727646147478274,
+      "worst_class_accuracy": 0.6820083682008368,
+      "splits": {
+        "price": {
+          "n": 2000,
+          "accuracy": 0.8285,
+          "nll": 0.7117357395624772
+        },
+        "select": {
+          "n": 1500,
+          "accuracy": 0.8186666666666667,
+          "nll": 0.7417867252358862
+        },
+        "report": {
+          "n": 1500,
+          "accuracy": 0.812,
+          "nll": 0.7347194469417242
+        }
+      },
+      "training_seconds": 341.53450216000135
+    },
+    {
+      "policy": "fit4_plus",
+      "seed": 20261027,
+      "steps": 5000,
+      "accuracy": 0.8044,
+      "nll": 0.8266090288800064,
+      "worst_class_accuracy": 0.6380753138075314,
+      "splits": {
+        "price": {
+          "n": 2000,
+          "accuracy": 0.813,
+          "nll": 0.8000511514176062
+        },
+        "select": {
+          "n": 1500,
+          "accuracy": 0.8026666666666666,
+          "nll": 0.8285466795899517
+        },
+        "report": {
+          "n": 1500,
+          "accuracy": 0.7946666666666666,
+          "nll": 0.8600818814532616
+        }
+      },
+      "training_seconds": 342.04779842199696
+    },
+    {
+      "policy": "fit4_plus",
+      "seed": 20261028,
+      "steps": 5000,
+      "accuracy": 0.8082,
+      "nll": 0.7939189958124026,
+      "worst_class_accuracy": 0.6694560669456067,
+      "splits": {
+        "price": {
+          "n": 2000,
+          "accuracy": 0.8155,
+          "nll": 0.7459188550971262
+        },
+        "select": {
+          "n": 1500,
+          "accuracy": 0.8006666666666666,
+          "nll": 0.8352434197863022
+        },
+        "report": {
+          "n": 1500,
+          "accuracy": 0.806,
+          "nll": 0.8165947594588711
+        }
+      },
+      "training_seconds": 342.038646273003
+    }
+  ],
+  "summaries": {
+    "uniform": {
+      "accuracy_mean": 0.8170666666666667,
+      "accuracy_seed_std": 0.016523115121953626,
+      "nll_mean": 0.7437784977116172,
+      "splits": {
+        "price": {
+          "accuracy_mean": 0.8246666666666665,
+          "nll_mean": 0.715177334127135
+        },
+        "select": {
+          "accuracy_mean": 0.8142222222222223,
+          "nll_mean": 0.7674714326051738
+        },
+        "report": {
+          "accuracy_mean": 0.8097777777777777,
+          "nll_mean": 0.7582204475973704
+        }
+      }
+    },
+    "fit4_plus": {
+      "accuracy_mean": 0.8110666666666667,
+      "accuracy_seed_std": 0.008471914384206983,
+      "nll_mean": 0.7827247240568943,
+      "splits": {
+        "price": {
+          "accuracy_mean": 0.819,
+          "nll_mean": 0.7525685820257365
+        },
+        "select": {
+          "accuracy_mean": 0.8073333333333332,
+          "nll_mean": 0.8018589415373801
+        },
+        "report": {
+          "accuracy_mean": 0.8042222222222222,
+          "nll_mean": 0.8037986959512856
+        }
+      }
+    }
+  },
+  "fit4_minus_uniform_pp": -0.6000000000000005,
+  "wall_seconds": 1103.5267069339752,
+  "bootstrap_seconds": 1111.7158479690552,
+  "checkpoint_count": 30,
+  "source_file_count": 41,
+  "new_successful_updates": 30000,
+  "D_test_C_risk_access": false,
+  "evidence_root": "runs/2026-10-26_uniform_fit4_full5000",
+  "limitations": [
+    "Full checkpoint tensors/hashes are runner evidence; independent audit verifies identities and remote byte lengths.",
+    "Historically exposed D_val; three classifier seeds on one frozen pool; exploratory arm; no certificate or significance claim.",
+    "No generator training or new FID/KID/P/R applies. Original frozen teacher pool reused."
+  ]
+}

@@ -1,7 +1,27 @@
 {
-  "updated_dhaka": "2026-10-26 20:44:51 Asia/Dhaka",
+  "updated_dhaka": "2026-10-26 22:35:02 Asia/Dhaka",
   "account": "hafizr283",
   "notebooks": [
+    {
+      "ref": "hafizr283/srgda-uniform-vs-fit4-full5000-two-t4-20261026",
+      "slug": "srgda-uniform-vs-fit4-full5000-two-t4-20261026",
+      "title": "SRGDA Uniform vs Fit4 Full5000 Two T4 20261026",
+      "id": 141013032,
+      "is_private": true,
+      "latest_version": 1,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-uniform-vs-fit4-full5000-two-t4-20261026",
+      "listed_last_run_utc": "2026-10-23T16:30:34.540Z",
+      "versions": [
+        {
+          "version_number": 1,
+          "status": "COMPLETE",
+          "url": "https://www.kaggle.com/code/hafizr283/srgda-uniform-vs-fit4-full5000-two-t4-20261026/versions/1",
+          "results": [],
+          "note": "Artifact verified: both arms × three seeds reached 5,000 updates; uniform 81.71% versus fit4_plus 81.11% on all 5,000 D_val images. No skips, all exits 0; two T4s, 18.39-minute controller wall.",
+          "status_evidence": "Exact-version source match and independent compact-artifact audit; notebook private, owner access required."
+        }
+      ]
+    },
     {
       "ref": "hafizr283/srgda-astra-mechanism-recovery-20261026",
       "slug": "srgda-astra-mechanism-recovery-20261026",

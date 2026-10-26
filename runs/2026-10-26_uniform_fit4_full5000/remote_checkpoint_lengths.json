@@ -1,0 +1,152 @@
+[
+  {
+    "name": "full5k/fit4_plus_seed20261026/step100.pt",
+    "bytes": 89520387,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261026/step1000.pt",
+    "bytes": 89522051,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261026/step200.pt",
+    "bytes": 89520579,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261026/step2500.pt",
+    "bytes": 89524739,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261026/step5000.pt",
+    "bytes": 89529283,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261027/step100.pt",
+    "bytes": 89520323,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261027/step1000.pt",
+    "bytes": 89521923,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261027/step200.pt",
+    "bytes": 89520515,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261027/step2500.pt",
+    "bytes": 89524675,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261027/step5000.pt",
+    "bytes": 89529219,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261028/step100.pt",
+    "bytes": 89520387,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261028/step1000.pt",
+    "bytes": 89522051,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261028/step200.pt",
+    "bytes": 89520579,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261028/step2500.pt",
+    "bytes": 89524739,
+    "http": 206
+  },
+  {
+    "name": "full5k/fit4_plus_seed20261028/step5000.pt",
+    "bytes": 89529283,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261026/step100.pt",
+    "bytes": 89520387,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261026/step1000.pt",
+    "bytes": 89522051,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261026/step200.pt",
+    "bytes": 89520579,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261026/step2500.pt",
+    "bytes": 89524739,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261026/step5000.pt",
+    "bytes": 89529283,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261027/step100.pt",
+    "bytes": 89520323,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261027/step1000.pt",
+    "bytes": 89521923,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261027/step200.pt",
+    "bytes": 89520515,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261027/step2500.pt",
+    "bytes": 89524675,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261027/step5000.pt",
+    "bytes": 89529219,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261028/step100.pt",
+    "bytes": 89520387,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261028/step1000.pt",
+    "bytes": 89522051,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261028/step200.pt",
+    "bytes": 89520579,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261028/step2500.pt",
+    "bytes": 89524739,
+    "http": 206
+  },
+  {
+    "name": "full5k/uniform_seed20261028/step5000.pt",
+    "bytes": 89529283,
+    "http": 206
+  }
+]
