@@ -1,0 +1,82 @@
+{
+  "schema": "srgda-integrated-submit-v1",
+  "status": "PREPARED_NOT_GPU_VALIDATED",
+  "run_id": "srgda_submit_integrated_20261027",
+  "generator": "student8",
+  "generator_training": "Fresh Trial2 native16-to8 progressive distillation; preserve original sanity/quality gates; stop after8; no failed4/2/1 branch",
+  "teacher_reference": "native conditional EDM35NFE, separate diagnostic reference",
+  "refinement": "disabled; no extra SDEdit is justified for the accepted native8 recipe",
+  "pool_count": 25000,
+  "pool_seed": 202610270000,
+  "real_count": 45000,
+  "classifier_seeds": [
+    2026102701,
+    2026102702,
+    2026102703
+  ],
+  "classifier_epochs": 75,
+  "classifier_horizon": 26400,
+  "synthetic_ratio": 0.2,
+  "baseline_arms": [
+    "real_only",
+    "uniform"
+  ],
+  "learned_arms": [
+    "full_ess0.6",
+    "full_ess0.7",
+    "full_ess0.8",
+    "collapsed_ess0.6",
+    "collapsed_ess0.7",
+    "collapsed_ess0.8"
+  ],
+  "learned_arm_policy": "Run only when the new pool-specific predictive/stability/deployed-weight gates pass; otherwise record SKIPPED_SCIENTIFIC_GATE and complete both baselines",
+  "price_sign_mode": "historical nonnegative harm penalties; persist signed fits separately; not a fitted signed-utility policy",
+  "profile_sigmas": [
+    0.1,
+    0.5,
+    2.0
+  ],
+  "profile_draws": 2,
+  "score_updates": 200,
+  "probe_real_count": 5000,
+  "probe_group_count": 60,
+  "probe_group_size": 400,
+  "probe_seeds": [
+    2026102711,
+    2026102712,
+    2026102713
+  ],
+  "probe_updates": 200,
+  "probe_model": "resnet18",
+  "probe_ratio": 0.2,
+  "price_gate": {
+    "max_cv_mse_ratio": 0.9,
+    "min_seed_spearman": 0.7,
+    "min_signal_se_ratio": 2.0
+  },
+  "session_cap_seconds": 37800,
+  "stage_caps_seconds": {
+    "generator": 3600,
+    "pool": 3600,
+    "profile": 5400,
+    "prices": 7200,
+    "classifiers": 27000,
+    "report": 600
+  },
+  "quality": {
+    "fake": 2000,
+    "real": 5000,
+    "feature_space": "torchvision Inception-v3 pool3 FP32",
+    "real_real": [
+      2500,
+      2500
+    ]
+  },
+  "selection": "Lowest mean V_select NLL within family; deterministic policy-name tie break. Frozen selected family checkpoints before V_report. No report-based retuning.",
+  "finalization": "Separate finalize command after exposure audit and frozen preregistration; no TEST batch opened by normal run",
+  "claim": "New integrated configuration; component success does not establish combined benefit; historically exposed D_val",
+  "launch_authorized": true,
+  "authorization": "User: after this set the run in kaggle; no more input; work as your recommendation",
+  "classifier_epochs_note": "75 nominal real-data passes in successful-update budget; verified minibatch sampling with replacement, not75 shuffled dataset traversals",
+  "stage_budget_note": "Classifier stage may use7.5hours if all six learned arms qualify; global10.5hours remains unchanged. Sanity does not use stagecaps."
+}

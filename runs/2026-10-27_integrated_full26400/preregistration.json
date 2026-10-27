@@ -1,0 +1,66 @@
+{
+  "schema": "srgda-submit-frozen-selection-v1",
+  "protocol_digest": "94374a206d8544e0f8177a7bd8b80d63819a45a26099b0841c9825dbeaa4564e",
+  "registration_sha256": "d9dbeac092d2a934c10da29b31a105855d0617cc6206b2f725f7bd89b2b2d632",
+  "selected": {
+    "real_only": "real_only",
+    "uniform": "uniform"
+  },
+  "checkpoints": {
+    "real_only": [
+      {
+        "path": "classifiers/real_only_seed2026102701/step26400.pt",
+        "sha256": "aacf54063b159d90f0f9f383a0a4e6590f03af3ed1ca9380528ae32739f513d9",
+        "seed": 2026102701,
+        "policy": "real_only"
+      },
+      {
+        "path": "classifiers/real_only_seed2026102702/step26400.pt",
+        "sha256": "72d99ff32a4e608c9fbaadb797965f3368a0e5eb850b40d05b10183645872fbf",
+        "seed": 2026102702,
+        "policy": "real_only"
+      },
+      {
+        "path": "classifiers/real_only_seed2026102703/step26400.pt",
+        "sha256": "84d13789e8cb87c75c732b7838b1bccb13237a3b1d6986cdedbf6b6d295f3f7c",
+        "seed": 2026102703,
+        "policy": "real_only"
+      }
+    ],
+    "uniform": [
+      {
+        "path": "classifiers/uniform_seed2026102701/step26400.pt",
+        "sha256": "a5d1644e049191e928de80b960dde0c3bb8cddaca2e03ba6ae96b2be162e06b4",
+        "seed": 2026102701,
+        "policy": "uniform"
+      },
+      {
+        "path": "classifiers/uniform_seed2026102702/step26400.pt",
+        "sha256": "90a5aa120d3c72f21b8e434f002d1fedaa946a9300b5b7ca1058610c887b8250",
+        "seed": 2026102702,
+        "policy": "uniform"
+      },
+      {
+        "path": "classifiers/uniform_seed2026102703/step26400.pt",
+        "sha256": "7c0c4666de72f2ca4843edc4c067400877a86964f8b8646253d90439252148a4",
+        "seed": 2026102703,
+        "policy": "uniform"
+      }
+    ]
+  },
+  "selection_rule": "Lowest mean V_select NLL within family; deterministic policy-name tie break. Frozen selected family checkpoints before V_report. No report-based retuning.",
+  "pairs": [
+    [
+      "uniform",
+      "real_only"
+    ]
+  ],
+  "M": 1,
+  "delta": 0.05,
+  "R": 2.0,
+  "n_risk": 7000,
+  "n_final_test": 3000,
+  "ensemble": "arithmetic mean of three fixed-seed FP32 probabilities",
+  "D_test_C_risk_access": false,
+  "independence_status": "EXPOSURE_AUDIT_REQUIRED; historical certificate reports exist"
+}

@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "notebook": 141124122,
+  "version": 1,
+  "status": "VERIFIED_DEVELOPMENT_COMPLETE",
+  "audit_utc": "2026-10-27T09:46:32.556743+00:00",
+  "compact_files_hash_checked": 187,
+  "stage_receipt_files_checked": 152,
+  "final_checkpoints": [
+    {
+      "policy": "real_only",
+      "seed": 2026102701,
+      "file": "srgda_submit_integrated_20261027/classifiers/real_only_seed2026102701/step26400.pt",
+      "bytes": 89581379,
+      "sha256": "aacf54063b159d90f0f9f383a0a4e6590f03af3ed1ca9380528ae32739f513d9",
+      "state_digest": "da18c731c2fcdef52c02faf8989c69d1b2d0cd486c10ac919ba4176745163e24",
+      "all_bn_counts": 26400,
+      "finite_full_state": true
+    },
+    {
+      "policy": "real_only",
+      "seed": 2026102702,
+      "file": "srgda_submit_integrated_20261027/classifiers/real_only_seed2026102702/step26400.pt",
+      "bytes": 89581955,
+      "sha256": "72d99ff32a4e608c9fbaadb797965f3368a0e5eb850b40d05b10183645872fbf",
+      "state_digest": "694f3e83012b6218034d7daafc186b7e991f1d86cb60aa04da371091f606d41b",
+      "all_bn_counts": 26400,
+      "finite_full_state": true
+    },
+    {
+      "policy": "real_only",
+      "seed": 2026102703,
+      "file": "srgda_submit_integrated_20261027/classifiers/real_only_seed2026102703/step26400.pt",
+      "bytes": 89581891,
+      "sha256": "84d13789e8cb87c75c732b7838b1bccb13237a3b1d6986cdedbf6b6d295f3f7c",
+      "state_digest": "f58b010b771bb8f639d151336c4bca5560290fe0aa11ae88838afc8b60500a53",
+      "all_bn_counts": 26400,
+      "finite_full_state": true
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102701,
+      "file": "srgda_submit_integrated_20261027/classifiers/uniform_seed2026102701/step26400.pt",
+      "bytes": 89581379,
+      "sha256": "a5d1644e049191e928de80b960dde0c3bb8cddaca2e03ba6ae96b2be162e06b4",
+      "state_digest": "b7036b967a547d3d80b2951a843494cbc423242ec103ccc5cbc66dc1bd869901",
+      "all_bn_counts": 26400,
+      "finite_full_state": true
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102702,
+      "file": "srgda_submit_integrated_20261027/classifiers/uniform_seed2026102702/step26400.pt",
+      "bytes": 89581955,
+      "sha256": "90a5aa120d3c72f21b8e434f002d1fedaa946a9300b5b7ca1058610c887b8250",
+      "state_digest": "3e42ab54bedaa3f7906ba1a05482f25e7725cf4150c22edce67757f470cc3a7c",
+      "all_bn_counts": 26400,
+      "finite_full_state": true
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102703,
+      "file": "srgda_submit_integrated_20261027/classifiers/uniform_seed2026102703/step26400.pt",
+      "bytes": 89581891,
+      "sha256": "7c0c4666de72f2ca4843edc4c067400877a86964f8b8646253d90439252148a4",
+      "state_digest": "378219a3fd529c4575ff0e52a528777cc3e24562c3486239bca7817dddb38961",
+      "all_bn_counts": 26400,
+      "finite_full_state": true
+    }
+  ],
+  "source_python_files": 88,
+  "gpu_sanity_passed": true,
+  "workers": [
+    {
+      "physical_card": 0,
+      "gpu": "Tesla T4",
+      "wall_seconds": 3203.0208025290003,
+      "jobs": 3
+    },
+    {
+      "physical_card": 1,
+      "gpu": "Tesla T4",
+      "wall_seconds": 5705.685336762001,
+      "jobs": 3
+    }
+  ],
+  "trajectories": [
+    {
+      "policy": "real_only",
+      "seed": 2026102701,
+      "successful": 26400,
+      "initial_updates": 5000,
+      "new_updates": 21400,
+      "overflow_retries": 3,
+      "accuracy": 0.9426666666666667,
+      "nll": 0.2056716840041063
+    },
+    {
+      "policy": "real_only",
+      "seed": 2026102702,
+      "successful": 26400,
+      "initial_updates": 0,
+      "new_updates": 26400,
+      "overflow_retries": 2,
+      "accuracy": 0.9506666666666667,
+      "nll": 0.21791860944445854
+    },
+    {
+      "policy": "real_only",
+      "seed": 2026102703,
+      "successful": 26400,
+      "initial_updates": 0,
+      "new_updates": 26400,
+      "overflow_retries": 3,
+      "accuracy": 0.936,
+      "nll": 0.23424186258298596
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102701,
+      "successful": 26400,
+      "initial_updates": 5000,
+      "new_updates": 21400,
+      "overflow_retries": 3,
+      "accuracy": 0.9506666666666667,
+      "nll": 0.18648980193550302
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102702,
+      "successful": 26400,
+      "initial_updates": 0,
+      "new_updates": 26400,
+      "overflow_retries": 3,
+      "accuracy": 0.9426666666666667,
+      "nll": 0.2166442189232075
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102703,
+      "successful": 26400,
+      "initial_updates": 0,
+      "new_updates": 26400,
+      "overflow_retries": 3,
+      "accuracy": 0.9493333333333334,
+      "nll": 0.19087823098605228
+    }
+  ],
+  "total_successful_updates": 158400,
+  "new_updates_this_recovery": 148400,
+  "rolled_back_overflow_retries": 17,
+  "V_select_mean": {
+    "real_only": {
+      "accuracy": 0.9431111111111111,
+      "nll": 0.21927738534385025
+    },
+    "uniform": {
+      "accuracy": 0.9475555555555556,
+      "nll": 0.19800408394825428
+    }
+  },
+  "V_report_ensemble": {
+    "real_only": {
+      "accuracy": 0.962,
+      "nll": 0.13155949243083426,
+      "n": 1500
+    },
+    "uniform": {
+      "accuracy": 0.9673333333333334,
+      "nll": 0.11304531395952294,
+      "n": 1500
+    }
+  },
+  "report_gain_percentage_points": 0.5333333333333412,
+  "report_nll_difference": -0.018514178471311316,
+  "exploratory_paired_report": {
+    "gained": 19,
+    "lost": 11,
+    "mcnemar_exact_two_sided_p": 0.20048842206597334,
+    "interpretation": "descriptive paired check on historically exposed D_val; not a certificate or independent confirmatory test"
+  },
+  "wall_seconds": 5819.783476352692,
+  "cumulative_wall_seconds": 16773.58011698723,
+  "weighted_policies": "SKIPPED_SCIENTIFIC_GATE",
+  "D_test_C_risk_access": false,
+  "limitations": [
+    "No independent model forward replay; metrics recomputed from saved predictions and checkpoint identity/source binding audited.",
+    "Report is three-seed ensemble, not mean seed accuracy.",
+    "Historically exposed D_val; no final-test/certificate claim.",
+    "Generator/pool/profile/pricing reused; no new FID or generation result."
+  ]
+}

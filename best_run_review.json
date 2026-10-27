@@ -1,22 +1,71 @@
 {
   "schema": "srgda-best-run-review-v1",
-  "updated_dhaka": "2026-10-26 22:35:02 Asia/Dhaka",
+  "updated_dhaka": "2026-10-27 16:01:51 Asia/Dhaka",
   "coverage": {
-    "notebooks": 32,
-    "versions": 39,
+    "notebooks": 33,
+    "versions": 40,
     "public": 14,
-    "private": 18,
+    "private": 19,
     "verified_completed_augmentation_arms": 5,
     "verified_fit_trajectories": 39,
     "historical_student_fid_points": 7,
     "closed_split_evaluation_performed": true,
     "verified_full5000_trajectories": 6,
-    "closed_split_note": "V_report opened for this explicitly authorized final full-D_val comparison; D_test/C_risk remain closed."
+    "closed_split_note": "V_report opened for this explicitly authorized final full-D_val comparison; D_test/C_risk remain closed.",
+    "verified_full26400_trajectories": 6,
+    "latest_reporting_split_images": 1500,
+    "latest_reporting_estimator": "three-seed probability ensemble"
   },
   "interpretation": "These are descriptive, protocol-specific results. D_val has historical and teacher exposure. No significance, final-test or certificate claim. New 2k/5k FID is not directly comparable with historical 8k/4k FID.",
   "findings": [
     {
-      "scope": "BEST COMPLETED MATCHED DOWNSTREAM COMPARISON",
+      "full_run_family": "uniform",
+      "scope": "LATEST FULL TRAINING RUN · VERIFIED",
+      "name": "Uniform synthetic augmentation",
+      "value": "96.73%",
+      "metric": "V_report · 1,500 images · three-seed probability ensemble",
+      "summary": "Uniform augmentation leads the matched real-only ensemble by 0.53 pp, with lower NLL: 0.1130 versus 0.1316.",
+      "limitation": "A small observed gain on historically exposed validation data. Learned weighting was skipped after failed gates; D_test and C_risk remain closed. No final-test or certificate claim. Different budget and estimator from the earlier 81.71% study.",
+      "evidence_links": [
+        {
+          "label": "Full training comparison",
+          "url": "#integrated-full-run"
+        },
+        {
+          "label": "Verified report",
+          "url": "runs/2026-10-27_integrated_full26400/report.html"
+        },
+        {
+          "label": "Full audit",
+          "url": "runs/2026-10-27_integrated_full26400/audit_verified.json"
+        }
+      ]
+    },
+    {
+      "full_run_family": "real_only",
+      "scope": "LATEST FULL TRAINING RUN · VERIFIED",
+      "name": "Real-only baseline",
+      "value": "96.20%",
+      "metric": "V_report · 1,500 images · three-seed probability ensemble",
+      "summary": "Matched real-only control: the same 45,000 real images, 26,400 updates and three fixed seeds; ensemble NLL 0.1316.",
+      "limitation": "A small observed gain on historically exposed validation data. Learned weighting was skipped after failed gates; D_test and C_risk remain closed. No final-test or certificate claim. Different budget and estimator from the earlier 81.71% study.",
+      "evidence_links": [
+        {
+          "label": "Full training comparison",
+          "url": "#integrated-full-run"
+        },
+        {
+          "label": "Verified report",
+          "url": "runs/2026-10-27_integrated_full26400/report.html"
+        },
+        {
+          "label": "Full audit",
+          "url": "runs/2026-10-27_integrated_full26400/audit_verified.json"
+        }
+      ]
+    },
+    {
+      "scope": "EARLIER 5,000-STEP MATCHED STUDY",
       "name": "5,000-step requested uniform",
       "value": "81.71%",
       "metric": "Mean accuracy · all 5,000 D_val images · three seeds",
@@ -119,6 +168,172 @@
     }
   ],
   "studies": [
+    {
+      "id": "integrated-full-run",
+      "title": "Full training run · 26,400 updates × six classifiers",
+      "verification_status": "COMPLETE",
+      "scientific_status": "Full run verified · 6 of 6 complete",
+      "decision": "Uniform augmentation: 96.73% versus 96.20% real-only ensemble accuracy (+0.53 pp); NLL 0.1130 versus 0.1316. All six final checkpoint states and saved predictions were audited. The 17 AMP overflows were rolled back; every final BatchNorm counter equals 26,400. Predictive, stability and signal price gates failed, so learned weighted arms were skipped. A small observed gain on historically exposed validation data. Learned weighting was skipped after failed gates; D_test and C_risk remain closed. No final-test or certificate claim.",
+      "protocol": "CIFAR-10; 45,000 real training images and 25,000 frozen native eight-step synthetic images. ResNet18, 26,400 successful updates per seed; seeds 2026102701/02/03. The first-seed pair resumed verified 5,000-update states; other seeds started fresh. Matched optimizer, LR, data, splits and AMP amendment. Both T4 workers exited 0. Individual models use 1,500 V_select images; frozen ensembles use 1,500 different V_report images. Historically exposed D_val.",
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-integrated-submit-amp-recovery-20261027/versions/1",
+      "tables": [
+        {
+          "caption": "Frozen three-seed ensembles on the same 1,500 V_report images",
+          "columns": [
+            {
+              "key": "name",
+              "label": "Method",
+              "format": "text"
+            },
+            {
+              "key": "accuracy",
+              "label": "V_report ensemble accuracy",
+              "format": "percent"
+            },
+            {
+              "key": "nll",
+              "label": "V_report ensemble NLL ↓",
+              "format": "nll"
+            },
+            {
+              "key": "delta",
+              "label": "Versus real-only",
+              "format": "delta_pp"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Real-only",
+              "accuracy": 0.962,
+              "nll": 0.13155949243083426,
+              "delta": 0.0
+            },
+            {
+              "name": "Uniform synthetic augmentation",
+              "accuracy": 0.9673333333333334,
+              "nll": 0.11304531395952294,
+              "delta": 0.005333333333333412
+            }
+          ]
+        }
+      ],
+      "details_label": "All six classifiers · individual V_select metrics and AMP recovery",
+      "details_table": {
+        "caption": "Different split: individual models on 1,500 V_select images; distinct from V_report ensemble accuracy",
+        "columns": [
+          {
+            "key": "policy",
+            "label": "Policy",
+            "format": "text"
+          },
+          {
+            "key": "seed",
+            "label": "Seed",
+            "format": "text"
+          },
+          {
+            "key": "successful",
+            "label": "Successful updates",
+            "format": "text"
+          },
+          {
+            "key": "accuracy",
+            "label": "Individual V_select accuracy",
+            "format": "percent"
+          },
+          {
+            "key": "nll",
+            "label": "Individual V_select NLL",
+            "format": "nll"
+          },
+          {
+            "key": "overflow_retries",
+            "label": "Rolled-back AMP retries",
+            "format": "text"
+          }
+        ],
+        "rows": [
+          {
+            "policy": "real_only",
+            "seed": 2026102701,
+            "successful": 26400,
+            "initial_updates": 5000,
+            "new_updates": 21400,
+            "overflow_retries": 3,
+            "accuracy": 0.9426666666666667,
+            "nll": 0.2056716840041063
+          },
+          {
+            "policy": "real_only",
+            "seed": 2026102702,
+            "successful": 26400,
+            "initial_updates": 0,
+            "new_updates": 26400,
+            "overflow_retries": 2,
+            "accuracy": 0.9506666666666667,
+            "nll": 0.21791860944445854
+          },
+          {
+            "policy": "real_only",
+            "seed": 2026102703,
+            "successful": 26400,
+            "initial_updates": 0,
+            "new_updates": 26400,
+            "overflow_retries": 3,
+            "accuracy": 0.936,
+            "nll": 0.23424186258298596
+          },
+          {
+            "policy": "uniform",
+            "seed": 2026102701,
+            "successful": 26400,
+            "initial_updates": 5000,
+            "new_updates": 21400,
+            "overflow_retries": 3,
+            "accuracy": 0.9506666666666667,
+            "nll": 0.18648980193550302
+          },
+          {
+            "policy": "uniform",
+            "seed": 2026102702,
+            "successful": 26400,
+            "initial_updates": 0,
+            "new_updates": 26400,
+            "overflow_retries": 3,
+            "accuracy": 0.9426666666666667,
+            "nll": 0.2166442189232075
+          },
+          {
+            "policy": "uniform",
+            "seed": 2026102703,
+            "successful": 26400,
+            "initial_updates": 0,
+            "new_updates": 26400,
+            "overflow_retries": 3,
+            "accuracy": 0.9493333333333334,
+            "nll": 0.19087823098605228
+          }
+        ]
+      },
+      "evidence_links": [
+        {
+          "label": "Verified report",
+          "url": "runs/2026-10-27_integrated_full26400/report.html"
+        },
+        {
+          "label": "Full audit",
+          "url": "runs/2026-10-27_integrated_full26400/audit_verified.json"
+        },
+        {
+          "label": "Experiment record",
+          "url": "runs/2026-10-27_integrated_full26400/experiment_record.md"
+        },
+        {
+          "label": "Evidence hashes",
+          "url": "runs/2026-10-27_integrated_full26400/evidence_manifest.json"
+        }
+      ]
+    },
     {
       "id": "full5000-comparison",
       "title": "Uniform versus fit4_plus · 5,000 steps verified",
@@ -626,6 +841,10 @@
   },
   "source_evidence": [
     {
+      "path": "runs/2026-10-27_integrated_full26400/audit_verified.json",
+      "sha256": "370fc5c3996aa279d99d5d9c946a7d7e5350eb2496ee6ece1c6ddb5747576e4c"
+    },
+    {
       "path": "runs/2026-10-26_uniform_fit4_full5000/verified.json",
       "sha256": "5a8a2614d3b19226bc1107615ac6c022ced3402965e9345d19b2e16f0868857f"
     },
@@ -657,5 +876,16 @@
       "path": "runs/2026-10-26_trials23/verified_artifacts/trial2/stage8/step1000_quality.json",
       "sha256": "8c62325c7a9e3686174b9b12e0e71743b72a6148010d5ec6b388b08755fd7a32"
     }
-  ]
+  ],
+  "featured_run": {
+    "date": "27 OCT 2026",
+    "summary": "Six classifier trajectories completed 26,400 updates each. Uniform synthetic augmentation reached 96.73% ensemble accuracy, versus 96.20% for real-only training.",
+    "report_url": "runs/2026-10-27_integrated_full26400/report.html",
+    "uniform_accuracy": 0.9673333333333334,
+    "real_accuracy": 0.962,
+    "uniform_nll": 0.11304531395952294,
+    "real_nll": 0.13155949243083426,
+    "limitation": "A small observed gain on historically exposed validation data. Learned weighting was skipped after failed gates; D_test and C_risk remain closed. No final-test or certificate claim."
+  },
+  "research_summary": "The full 26,400-update run is complete and audited: six classifiers, frozen reporting ensembles and 17 safely rolled-back AMP overflows. Earlier studies retain their original protocols and decisions."
 }

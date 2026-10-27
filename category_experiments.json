@@ -1,6 +1,53 @@
 {
-  "updated_dhaka": "2026-10-26 22:35:02 Asia/Dhaka",
+  "updated_dhaka": "2026-10-27 16:01:51 Asia/Dhaka",
   "experiments": [
+    {
+      "title": "Full run · 26,400 updates · real-only versus uniform augmentation",
+      "status": "COMPLETE",
+      "verified": true,
+      "result_kind": "downstream_ensemble",
+      "ensemble_seeds": [
+        2026102701,
+        2026102702,
+        2026102703
+      ],
+      "table_caption": "V_report: 1,500-image frozen three-seed probability ensemble; not mean individual-model accuracy",
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-integrated-submit-amp-recovery-20261027/versions/1",
+      "decision": "Uniform augmentation: 96.73% versus 96.20% real-only ensemble accuracy (+0.53 pp); NLL 0.1130 versus 0.1316. All six final checkpoint states and saved predictions were audited. The 17 AMP overflows were rolled back; every final BatchNorm counter equals 26,400. Predictive, stability and signal price gates failed, so learned weighted arms were skipped. A small observed gain on historically exposed validation data. Learned weighting was skipped after failed gates; D_test and C_risk remain closed. No final-test or certificate claim.",
+      "protocol": "CIFAR-10; 45,000 real training images and 25,000 frozen native eight-step synthetic images. ResNet18, 26,400 successful updates per seed; seeds 2026102701/02/03. The first-seed pair resumed verified 5,000-update states; other seeds started fresh. Matched optimizer, LR, data, splits and AMP amendment. Both T4 workers exited 0. Individual models use 1,500 V_select images; frozen ensembles use 1,500 different V_report images. Historically exposed D_val.",
+      "evidence_links": [
+        {
+          "label": "Verified report",
+          "url": "runs/2026-10-27_integrated_full26400/report.html"
+        },
+        {
+          "label": "Full audit",
+          "url": "runs/2026-10-27_integrated_full26400/audit_verified.json"
+        },
+        {
+          "label": "Experiment record",
+          "url": "runs/2026-10-27_integrated_full26400/experiment_record.md"
+        },
+        {
+          "label": "Evidence hashes",
+          "url": "runs/2026-10-27_integrated_full26400/evidence_manifest.json"
+        }
+      ],
+      "arms": [
+        {
+          "name": "Real-only ensemble",
+          "downstream_accuracy": 0.962,
+          "mean_nll": 0.13155949243083426,
+          "successful_updates": 26400
+        },
+        {
+          "name": "Uniform augmentation ensemble",
+          "downstream_accuracy": 0.9673333333333334,
+          "mean_nll": 0.11304531395952294,
+          "successful_updates": 26400
+        }
+      ]
+    },
     {
       "title": "5,000-step requested uniform versus frozen fit4_plus",
       "status": "COMPLETE",

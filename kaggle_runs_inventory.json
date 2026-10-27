@@ -1,7 +1,27 @@
 {
-  "updated_dhaka": "2026-10-26 22:35:02 Asia/Dhaka",
+  "updated_dhaka": "2026-10-27 16:01:51 Asia/Dhaka",
   "account": "hafizr283",
   "notebooks": [
+    {
+      "ref": "hafizr283/srgda-integrated-submit-amp-recovery-20261027",
+      "slug": "srgda-integrated-submit-amp-recovery-20261027",
+      "title": "SRGDA Integrated Submit AMP Recovery 20261027",
+      "id": 141124122,
+      "is_private": true,
+      "latest_version": 1,
+      "url": "https://www.kaggle.com/code/hafizr283/srgda-integrated-submit-amp-recovery-20261027",
+      "listed_last_run_utc": "unknown",
+      "versions": [
+        {
+          "version_number": 1,
+          "status": "COMPLETE",
+          "url": "https://www.kaggle.com/code/hafizr283/srgda-integrated-submit-amp-recovery-20261027/versions/1",
+          "results": [],
+          "note": "Artifact verified: all six classifiers reached 26,400 updates. Uniform 96.73% versus real-only 96.20% V_report three-seed ensemble. Seventeen AMP overflows rolled back. Weighted policies skipped under failed scientific gates. Public audit and report linked above.",
+          "status_evidence": "Exact version, bootstrap, source, 187 compact outputs and six full checkpoint states audited. Private Kaggle notebook; public curated evidence hosted here."
+        }
+      ]
+    },
     {
       "ref": "hafizr283/srgda-uniform-vs-fit4-full5000-two-t4-20261026",
       "slug": "srgda-uniform-vs-fit4-full5000-two-t4-20261026",

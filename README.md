@@ -2,20 +2,26 @@
 
 [Main dashboard](https://hafizr283.github.io/srgda-kaggle-runs/) · [HTML mirror](https://hafizr283.github.io/srgda-kaggle-runs/kaggle_runs.html) · [Kaggle notebooks](https://www.kaggle.com/hafizr283/code)
 
-Updated 26 October 2026, Asia/Dhaka. The site preserves notebook versions, quality metrics, independent conditioning checks, class grids and experiment evidence. It is a saved snapshot; execution status and scientific verification are separate.
+Updated 27 October 2026, Asia/Dhaka. The site preserves notebook versions, quality metrics, independent conditioning checks, class grids and experiment evidence. It is a saved snapshot; execution status and scientific verification are separate.
 
 ## Best results and latest verification
 
-Reviewed 2026-10-26 22:35:02 Asia/Dhaka. **Best completed matched downstream comparison: requested uniform at 5,000 steps, 81.71% mean full-D_val accuracy**, versus **81.11% for frozen fit4_plus**. Uniform leads by 0.60 percentage points and has lower mean NLL (0.7438 versus 0.7827). Both arms completed all 5,000 updates across three matched seeds, with zero AMP skips. Two T4s ran concurrently; controller wall 18.39 minutes.
+Reviewed 2026-10-27 16:01:51 Asia/Dhaka. **Highlighted full training run: six classifiers completed 26,400 successful updates each.**
 
-| Classifier at 5,000 steps | Seed 20261026 | Seed 20261027 | Seed 20261028 | Mean accuracy | Mean NLL |
-|---|---:|---:|---:|---:|---:|
-| Requested uniform | 82.72% | 82.60% | 79.80% | **81.71%** | **0.7438** |
-| fit4_plus | 82.06% | 80.44% | 80.82% | 81.11% | 0.7827 |
+| Frozen three-seed ensemble | V_report accuracy | NLL |
+|---|---:|---:|
+| Real-only | 96.20% | 0.1316 |
+| Uniform synthetic augmentation | **96.73%** | **0.1130** |
 
-Same 5,000 D_val images for both arms. Historically exposed validation data; D_test and C_risk untouched. [Verified completion](instructions/runs/2026-10-26_uniform_fit4_full5000_verified_141013032.md) · [Independent audit](runs/2026-10-26_uniform_fit4_full5000/verified.json) · [Exact Kaggle version](https://www.kaggle.com/code/hafizr283/srgda-uniform-vs-fit4-full5000-two-t4-20261026/versions/1) (private; owner login required).
+**Observed uniform augmentation gain: +0.53 percentage points** on the same 1,500 V_report images. These are three-seed probability ensembles. The matched run uses 45k real training images, a frozen 25k native eight-step synthetic pool and two T4s. All six final checkpoint states and 187 compact artifacts were audited. Seventeen AMP overflows were safely rolled back; all final BatchNorm counters equal 26,400. The final recovery took 97 minutes; cumulative original/recovery script wall time was 4.66 hours.
 
-The earlier **fit4_plus 64.98% versus uniform 62.38%** was exploratory on the **2,000-image pricing split**, at 1,000 steps and different seeds. It did not predict a mean advantage in this 5,000-step comparison. The original Trial 3 five-arm comparison at 1,000 steps remains below as historical evidence.
+A small observed gain on historically exposed validation data. Learned weighting was skipped after failed gates; D_test and C_risk remain closed. No final-test or certificate claim. An exploratory paired check gives p=0.20049; the small observed difference does not establish a reliable general improvement.
+
+[Full report](runs/2026-10-27_integrated_full26400/report.html) · [Independent audit](runs/2026-10-27_integrated_full26400/audit_verified.json) · [All six seed results](runs/2026-10-27_integrated_full26400/metrics.json) · [Evidence hashes](runs/2026-10-27_integrated_full26400/evidence_manifest.json) · [Exact Kaggle version](https://www.kaggle.com/code/hafizr283/srgda-integrated-submit-amp-recovery-20261027/versions/1) (private; owner login required).
+
+### Earlier 5,000-step study: separate protocol
+
+Requested uniform at 81.71% versus fit4_plus at 81.11% was mean per-model accuracy on all 5,000 D_val images, using a smaller 5,000-real / 5,000-synthetic budget and three other seeds. The new 96.73% ensemble result uses a different data/training budget, reporting split and estimator; it is not an apples-to-apples jump from 81.71%. [Preserved earlier evidence](instructions/runs/2026-10-26_uniform_fit4_full5000_verified_141013032.md).
 
 **Best accepted compact-generator screen: Trial 2 eight-step student**, 93.45% independent class obedience / FID 28.53 at 2k fake / 5k real. **Best historical student FID: cap30 at 5k, 42.31**, under 8k/4k; these FIDs cannot be directly compared. Teacher and 45k-real evaluator references are separate.
 

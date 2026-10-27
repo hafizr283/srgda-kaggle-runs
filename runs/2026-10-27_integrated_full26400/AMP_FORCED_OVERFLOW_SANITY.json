@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "forced_overflow_retries": 1,
+  "exact_parameter_buffer_optimizer_rng_parity": true,
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91900,
+    "gpu": "Tesla T4",
+    "capability": [
+      7,
+      5
+    ],
+    "deterministic": true,
+    "cudnn_benchmark": false,
+    "tf32": false,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "PYTHONHASHSEED": "0"
+  }
+}

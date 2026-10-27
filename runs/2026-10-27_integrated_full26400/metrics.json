@@ -1,0 +1,105 @@
+{
+  "status": "DEVELOPMENT_COMPLETE_PENDING_INDEPENDENT_AUDIT",
+  "selected": {
+    "real_only": "real_only",
+    "uniform": "uniform"
+  },
+  "selection_rows": [
+    {
+      "policy": "real_only",
+      "seed": 2026102701,
+      "steps": 26400,
+      "V_select_accuracy": 0.9426666666666667,
+      "V_select_nll": 0.2056716840041063
+    },
+    {
+      "policy": "real_only",
+      "seed": 2026102702,
+      "steps": 26400,
+      "V_select_accuracy": 0.9506666666666667,
+      "V_select_nll": 0.21791860944445854
+    },
+    {
+      "policy": "real_only",
+      "seed": 2026102703,
+      "steps": 26400,
+      "V_select_accuracy": 0.936,
+      "V_select_nll": 0.23424186258298596
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102701,
+      "steps": 26400,
+      "V_select_accuracy": 0.9506666666666667,
+      "V_select_nll": 0.18648980193550302
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102702,
+      "steps": 26400,
+      "V_select_accuracy": 0.9426666666666667,
+      "V_select_nll": 0.2166442189232075
+    },
+    {
+      "policy": "uniform",
+      "seed": 2026102703,
+      "steps": 26400,
+      "V_select_accuracy": 0.9493333333333334,
+      "V_select_nll": 0.19087823098605228
+    }
+  ],
+  "numerical_recovery": {
+    "policy": "restore pre-forward buffers/RNG; retry identical batch at reduced AMP scale; max16 retries",
+    "parent_notebook": 141097500,
+    "parent_version": 1,
+    "legacy_recipe_skip_policy_overridden": true,
+    "overflow_retries_by_arm": {
+      "real_only_seed2026102701": 3,
+      "real_only_seed2026102702": 2,
+      "real_only_seed2026102703": 3,
+      "uniform_seed2026102701": 3,
+      "uniform_seed2026102702": 3,
+      "uniform_seed2026102703": 3
+    }
+  },
+  "V_report_ensemble": {
+    "real_only": {
+      "policy": "real_only",
+      "n": 1500,
+      "accuracy": 0.962,
+      "nll": 0.13155949243083426,
+      "estimator": "three-seed probability ensemble; not mean single-model accuracy"
+    },
+    "uniform": {
+      "policy": "uniform",
+      "n": 1500,
+      "accuracy": 0.9673333333333334,
+      "nll": 0.11304531395952294,
+      "estimator": "three-seed probability ensemble; not mean single-model accuracy"
+    }
+  },
+  "price_gate": {
+    "passed": false,
+    "mse": {
+      "full": 0.0029598577742167933,
+      "scalar": 0.002985756199264843,
+      "constant": 0.0029124755591285333,
+      "zero": 0.003474375786448688
+    },
+    "predictive_pass": false,
+    "stability_pass": false,
+    "signal_pass": false,
+    "seed_spearman": [
+      0.9347596554598503,
+      -0.8118921922756323,
+      -0.7302028341205892
+    ],
+    "median_seed_spearman": -0.7302028341205892,
+    "signal_std": 0.0543434157045593,
+    "median_seed_se": 0.05304945511658456,
+    "interpretation": "New preregistered descriptive screen; dependent probes preclude treating ordinary F-test p-values as confirmatory."
+  },
+  "certificate_status": "NOT_OPENED_EXPOSURE_AUDIT_REQUIRED",
+  "D_test_C_risk_access": false,
+  "claim": "Historically exposed D_val. No final-test, certificate, one-step or learned-weighting benefit claimed automatically."
+}

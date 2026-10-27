@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A dated SR-GDA research archive: exact Kaggle notebook versions, saved CIFAR-10 quality metrics, and sample images.">
+  <meta name="description" content="Verified full CIFAR-10 training run: six classifiers at 26,400 updates. Uniform augmentation 96.73% versus real-only 96.20% validation ensemble accuracy, with original evidence.">
   <meta name="theme-color" content="#152f2a">
   <title>SR-GDA · Experiment archive</title>
   <style>$stylesheet</style>
@@ -16,7 +16,8 @@
     <p class="rail-label">WORKSPACE</p>
     <nav class="rail-nav" aria-label="Sections">
       <a class="active" href="#overview" aria-current="location">$icon_grid<span>Overview</span><span class="nav-number">01</span></a>
-      <a href="#best">$icon_chart<span>Best so far</span><span class="nav-number">New</span></a>
+      <a href="#integrated-full-run">$icon_check<span>Full training run</span><span class="nav-number">New</span></a>
+      <a href="#best">$icon_chart<span>Verified results</span><span class="nav-number">New</span></a>
       <a href="#research">$icon_book<span>Latest research</span><span class="nav-number">New</span></a>
       <a href="#conditioning">$icon_chart<span>Category conditioning</span><span class="nav-number">New</span></a>
       <a href="#downstream">$icon_chart<span>Classifier results</span><span class="nav-number">New</span></a>
@@ -33,12 +34,8 @@
     <header class="topbar"><p class="breadcrumb">Research workspace <span>/</span> <strong>Experiment archive</strong></p><div class="snapshot"><span class="snapshot-dot" aria-hidden="true"></span><span>Dated snapshot <time>$timestamp</time> · Dhaka</span></div></header>
     <main id="main" tabindex="-1">
       <section id="overview" class="overview" aria-labelledby="overview-title">
-        <div class="hero">
-          <div class="hero-copy"><p class="eyebrow">SR-GDA / CIFAR-10</p><h1 id="overview-title">Experiments,<br><em>in clearer view.</em></h1><p class="hero-description">The saved runs behind the thesis. Compare generator quality, inspect sample images, and return to the exact notebook version.</p><div class="hero-actions"><a class="button primary" href="#notebooks" data-public-shortcut>Browse public notebooks $icon_arrow</a><a class="button secondary" href="#results">Compare results $icon_chart</a></div><p class="hero-caption">One archive. Original evidence. Every saved version.</p></div>
-          <aside class="best-panel" aria-label="Best saved student result">$best</aside>
-        </div>
+        $featured_hero
         <div class="stats" aria-label="Inventory summary">$stats</div>
-        $latest
       </section>
 
       $review_sections
@@ -47,6 +44,7 @@
 
       <section id="results" class="archive-section" aria-labelledby="results-title">
         <div class="section-heading"><div><p class="eyebrow">02 / MEASURED QUALITY</p><h2 id="results-title">The results, side by side.</h2><p>$student_count student points and $teacher_count teacher reference. Lower FID is better.</p></div><a class="section-link" href="#notes">Read the protocol $icon_arrow</a></div>
+        $latest
         <div class="comparison-panel">
           <div class="comparison-controls"><div class="segmented" role="group" aria-label="Filter comparison results"><button type="button" class="selected" data-result-kind="all" aria-pressed="true">All results <span>$comparison_count</span></button><button type="button" data-result-kind="student" aria-pressed="false">Students <span>$student_count</span></button><button type="button" data-result-kind="teacher" aria-pressed="false">Teacher <span>$teacher_count</span></button></div><div class="sort-control"><label for="result-sort">Sort by</label><select id="result-sort"><option value="fid">Lowest FID</option><option value="name">Name A–Z</option></select></div></div>
           <div class="table-scroll" tabindex="0" role="region" aria-label="Quality comparison table, scroll horizontally on small screens">

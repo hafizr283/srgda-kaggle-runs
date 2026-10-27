@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "both_gpu_workers": true,
+  "restored_updates": 5000,
+  "sanity_cutoff": 5020,
+  "forced_overflow_parity": true,
+  "full_run_resumes_original5000_not_sanity_state": true
+}
