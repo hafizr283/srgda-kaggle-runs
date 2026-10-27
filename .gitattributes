@@ -1,0 +1,2 @@
+# Preserve exact bytes covered by the verified evidence manifest.
+runs/2026-10-27_integrated_full26400/** -text
