@@ -885,7 +885,8 @@
     "real_accuracy": 0.962,
     "uniform_nll": 0.11304531395952294,
     "real_nll": 0.13155949243083426,
-    "limitation": "A small observed gain on historically exposed validation data. Learned weighting was skipped after failed gates; D_test and C_risk remain closed. No final-test or certificate claim."
+    "limitation": "A small observed gain on historically exposed validation data. Learned weighting was skipped after failed gates; D_test and C_risk remain closed. No final-test or certificate claim.",
+    "gallery_image": "runs/2026-10-27_integrated_full26400/reused_pool_grid.png"
   },
   "research_summary": "The full 26,400-update run is complete and audited: six classifiers, frozen reporting ensembles and 17 safely rolled-back AMP overflows. Earlier studies retain their original protocols and decisions."
 }
